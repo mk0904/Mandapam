@@ -1,0 +1,132 @@
+
+.main-logo{
+     font-size: 1.7rem;
+     font-weight: 500;
+     color: hsl(0, 87%, 25%);
+}
+
+.br-header{
+     width: 100%;
+     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     color: hsl(0, 0%, 100%);
+     font-weight: 500;
+     font-size: 1.1rem;
+   }
+   
+.navbar-center ul {
+     list-style-type: none;
+     color: white;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+   }
+
+.navbar-center ul li{
+     padding: 0px 20px;
+     text-decoration: none;
+   }
+
+.navbar-right ul {
+     list-style-type: none;
+     color: white;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+   }
+
+.navbar-right ul li{
+     padding: 0px 20px;
+     text-decoration: none;
+   }
+
+.mandapamfc{
+     color: hsl(0, 0%, 0%);
+     font-weight: 400;
+     font-size: 1rem;
+     text-decoration: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+.mandapamfc .s1{
+     color: hsl(0, 0%, 100%);
+     background-color: hsla(0, 87%, 15%, 0.796);
+     padding: 1px 3px;
+     border-radius: 3px;
+     font-size: 0.8rem;
+     font-weight: 600;
+     text-decoration: none;
+}
+
+a {
+     color: hsl(0, 87%, 15%);
+     text-decoration: none;
+   }
+
+.navbar-center ul li:hover,
+.navbar-right ul li:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+    color: hsl(0, 87%, 20%);
+}
+
+a:hover {
+    transition: color 0.3s ease;
+    color: hsl(0, 87%, 25%);
+}
+
+.main-logo,
+.navbar-center ul li,
+.navbar-right ul li {
+    transition: text-shadow 0.3s ease;
+}
+
+.main-logo:hover,
+.navbar-center ul li:hover,
+.navbar-right ul li:hover {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar-center select {
+     background-color: hsl(0, 87%, 15%);
+     color: hsl(0, 0%, 100%);
+     border: 1px solid hsl(0, 87%, 15%);
+     border-radius: 4px;
+     padding: 8px 12px;
+     font-size: 1rem;
+     font-weight: 500;
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+     outline: none; /* Remove default outline */
+     appearance: none; /* Remove default styling in some browsers */
+ }
+ 
+ /* Style the dropdown options */
+ .navbar-center select option {
+     background-color: hsl(0, 88%, 16%);
+     color: hsl(0, 0%, 100%);
+     padding: 8px;
+ }
+ 
+ /* Add hover effect for the dropdown */
+ .navbar-center select:hover {
+     background-color: hsl(0, 88%, 16%);
+     border-color: hsl(0, 87%, 20%);
+ }
+ 
+ /* Style the dropdown arrow */
+ .navbar-center select::-ms-expand {
+     display: none; /* Remove default dropdown arrow in IE */
+ }
+ 
+ .navbar-center select {
+     background-size: 12px;
+ }
+ 

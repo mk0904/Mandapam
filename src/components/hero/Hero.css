@@ -1,0 +1,20 @@
+.heroBgm {
+     height: 100%;
+     width: 100%;
+     opacity: 0.85;
+     position: relative; /* Ensures h1 is positioned relative to this container */
+     background-position: center; /* Centers the image */
+ }
+ 
+.heroInput{
+     font-size: 01.2rem;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     font-weight: 700;
+     color: hsl(0, 87%, 25%);
+     margin: 0;
+     z-index: 10; 
+ }
+ 

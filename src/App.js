@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import Menubar from './components/menubar/menubar';
+import Hero from './components/hero/Hero';
+import BasicDemo from './components/dropdown/Dropdown';
+import SelectAutoWidth from './components/dropdown/Dropdown';
+
+
+  
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Menubar/>
+      </BrowserRouter>
+      <Hero/>
+      <BasicDemo/>
+      
     </div>
   );
 }

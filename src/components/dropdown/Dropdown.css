@@ -1,0 +1,33 @@
+.dropdown{
+     position: relative;
+     padding: 10px;
+     background-color: hsla(0, 87%, 15%, 0.229);
+     border-radius: 5px;
+}
+
+.p-dropdown-panel{
+     position: absolute;
+     top: 100%;
+}
+
+.p-dropdown-items-wrapper{
+     display: flex;
+     flex-direction: column;
+     background-color: hsla(0, 87%, 15%, 0.229);
+     border-radius: 5px;
+     position: absolute;
+     top: 100%;
+     z-index: 100;
+     width: 100%;
+}
+.p-dropdown-panel li{
+     padding: 10px;
+     border-bottom: 1px solid hsla(0, 87%, 15%, 0.229);
+     color: hsl(0, 87%, 15%);
+     font-weight: 600;
+     cursor: pointer;
+}    
+
+.p-dropdown-panel li:hover{
+     background-color: hsla(0, 87%, 15%, 0.229);
+}    
