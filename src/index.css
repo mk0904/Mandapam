@@ -3,6 +3,8 @@
 :root{
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
@@ -10,4 +12,5 @@ body {
   font-family: "SUSE", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
