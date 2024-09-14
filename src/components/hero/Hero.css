@@ -1,15 +1,13 @@
-
+/* .hero{
+   padding-top: 60px;
+} */
 .heroBgm {
      height: 100%;
      width: 100%;
      opacity: 0.85;
-     /* opacity: 0.9; */
-     padding-top: 70px;
      position: relative;
      background-position: center;
      filter: brightness(0.75);
-     /* filter: blur(1.75px);
-     filter: brightness(0.75); */
  }
 
  .heroBgm img {

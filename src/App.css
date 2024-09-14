@@ -2,3 +2,9 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.hero{
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+}

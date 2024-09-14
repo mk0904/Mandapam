@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Menubar from './components/menubar/menubar';
 import Hero from './components/hero/Hero';
-import Calendar from './components/calendar/Calendar';
+import PlanYourWedding from './components/planYourWedding/PlanYourWedding';
+import VendorsPage from './components/vendorsPage/VendorsPage';
   
 function App() {
 
@@ -11,13 +12,12 @@ function App() {
     <div>
       <BrowserRouter>
         <Menubar/>
-        {/* <Routes>
+        <Routes>
           <Route path="/resorts" element={<Hero/>} />
-          <Route path="/vendors" element={<Calendar />} />
-          <Route path="/plan-your-wedding" element={<Hero />} />
-      </Routes> */}
+          <Route path="/vendors" element={<VendorsPage/>} />
+          <Route path="/plan-your-wedding" element={<PlanYourWedding/>} />
+      </Routes>
       </BrowserRouter>
-      <Hero/>
       
     </div>
   );

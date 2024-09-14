@@ -1,0 +1,98 @@
+:root {
+     font-family: 'SUSE', sans-serif;
+   }
+   
+   .Bgm {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     filter: brightness(0.45);
+   }
+   
+   .Bgm img {
+     width: 100%;
+     height: 100vh;
+     object-fit: cover;
+     z-index: -1;
+     filter: blur(2px);
+     position: absolute;
+     top: 0;
+     left: 0;
+   }
+   .cardContainerDiv{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+   
+   .cardContainer {
+     position: absolute; /* Place the cardContainer over the heroBgm */
+     top: 15%; /* Adjust the position based on your design */ /* Center the container horizontally and vertically */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     z-index: 1; /* Ensure the cards appear above the background */
+   }
+
+   .cardContainer h1 {
+     font-size: 2.2rem;
+     font-weight: 700;
+     color: hsl(0, 22%, 77%);
+     margin-top: 2rem;
+     margin-bottom: 4rem;
+     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .cardContainer p{
+     font-size: 1.1rem;
+     font-weight: 400;
+     color: hsla(0, 87%, 15%, 0.796);
+     margin-top: -15px;
+     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .card {
+     max-width: 275px;
+     min-height: 500px;
+     margin: 20px;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     text-align: start;
+     align-items: flex-start;
+     background-color: rgba(255, 255, 255, 0.67); /* Add slight transparency to cards */
+   }
+   
+   .cardInfo {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     min-height: 450px;
+   }
+   
+   .cardInfo li{
+     list-style-type: circle ;
+   }
+
+   .card button{
+     background-color: hsla(0, 87%, 15%, 0.796);
+     color: white;
+     font-size: 1.1rem;
+     font-weight: 500;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+   }
+
+   .card button:hover{
+     background-color: hsl(0, 87%, 15%);
+   }

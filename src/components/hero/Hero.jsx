@@ -10,7 +10,6 @@ function Hero() {
     <div className="hero">
         <div className="heroBgm">
           <img src={heroBgm} alt="hero" />
-          
         </div>
 
         <div className="heroInput">
