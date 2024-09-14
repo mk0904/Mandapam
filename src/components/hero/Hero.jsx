@@ -1,27 +1,35 @@
-
-import heroBgm from "../../images/hero.jpg";
-
 import "./Hero.css";
+import DropdownCity from "../dropdown/Dropdown";
+import heroBgm from "../../images/hero.jpg";
+import EventDateSelector from "../calendar/Calendar";
+import RoomAndVisitors from "../roomAndVisitors/roomAndVisitors";
 
 function Hero() {
-  const items = [
-    "Goa",
-    "Jim Corbett",
-    "Udaipur",
-    "Jaipur",
-    "Pune",
-    "Mumbai",
-    "Delhi",
-    "Bangalore",
-    "Lucknow",
-    "Hyderabad",
-  ];
 
   return (
-    <div className="heroBgm">
-      <img className="heroBgm" src={heroBgm} alt="hero" />
-      <div className="heroInput">
-      </div>
+    <div className="hero">
+        <div className="heroBgm">
+          <img src={heroBgm} alt="hero" />
+          
+        </div>
+
+        <div className="heroInput">
+          <div className="heroTextBox">
+            <h1 className="heroTitle">your perfect destination</h1>
+            {/* <p className="heroText">the perfect destination with your destined one..</p> */}
+          </div>
+          <div className="heroInputDiv">
+            <div className="dropDownDiv">
+              <DropdownCity />
+            </div>
+            <div className="dateSelectorDiv">
+              <EventDateSelector />
+            </div>
+            <div className="peopleAndRoomDiv">
+              <RoomAndVisitors />
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

@@ -1,12 +1,14 @@
+import { Calendar } from 'primereact/calendar';
+import Hero from '../hero/Hero';
 import './menubar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Routes, Route} from 'react-router-dom';
 
 function Menubar() {
   return (
     <div className='br-header'>
       <nav className="navbar">
         <div className="navbar-left">
-          <a href="/" className="main-logo">mandapam</a>
+          <NavLink to="/" className="main-logo">mandapam</NavLink>
         </div>
         <div className="navbar-center">
           <ul>
@@ -18,11 +20,12 @@ function Menubar() {
         </div>
         <div className="navbar-right">
           <ul>
-            <li><a className='mandapamfc' href="/mfc">mandapam <span className='s1'>for <span className='s2'>corporates</span></span> </a></li>
-            <li><a href="/login">Login</a></li>
+            <li><NavLink className='mandapamfc' to="/mfc">mandapam <span className='s1'>for <span className='s2'>corporates</span></span> </NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
           </ul>
         </div>
       </nav>
+      
     </div>
   );
 }

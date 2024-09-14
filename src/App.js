@@ -1,12 +1,9 @@
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Menubar from './components/menubar/menubar';
 import Hero from './components/hero/Hero';
-import BasicDemo from './components/dropdown/Dropdown';
-import SelectAutoWidth from './components/dropdown/Dropdown';
-
-
+import Calendar from './components/calendar/Calendar';
   
 function App() {
 
@@ -14,9 +11,13 @@ function App() {
     <div>
       <BrowserRouter>
         <Menubar/>
+        {/* <Routes>
+          <Route path="/resorts" element={<Hero/>} />
+          <Route path="/vendors" element={<Calendar />} />
+          <Route path="/plan-your-wedding" element={<Hero />} />
+      </Routes> */}
       </BrowserRouter>
       <Hero/>
-      <BasicDemo/>
       
     </div>
   );

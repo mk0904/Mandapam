@@ -1,0 +1,70 @@
+.roomsAndVisitors {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.p-inputnumber-button-group{
+     background-color: transparent;
+}
+.p-inputnumber:hover{
+     background-color: hsla(0, 86%, 19%, 0.025);
+}
+#guests{
+  border-right: 0.7px solid hsla(0, 87%, 25%, 0.405);
+}
+
+
+.p-inputnumber-input {
+     padding: 20px;
+     font-weight: 600;
+     font-size: 1.15rem;
+  width: 100%;
+  font-family: "SUSE", sans-serif;
+  border: none;
+  outline: none;
+}
+
+.p-inputnumber-button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.p-inputnumber-button:hover {
+  background-color: hsla(0, 86%, 19%, 0.020);
+}
+
+.p-button-secondary {
+  background-color: transparent;
+  border: none;
+}
+
+.p-button-secondary:hover {
+  background-color: hsla(0, 86%, 19%, 0.020);
+}
+
+.p-inputnumber-input .p-inputtext{
+     padding: 10px;
+     outline: none;
+     padding-right: 2px;
+     border: none;
+     font-family: 'SUSE', sans-serif;
+}
+
+.p-float-label label{
+     left: 10px;
+     z-index: 100;
+     font-weight: 500;
+     font-size: 1rem;
+     color: rgb(104, 104, 104);
+}
+.p-float-label:has(input:focus) label, .p-float-label:has(.p-inputwrapper-filled) label{
+     top: -0.75rem;
+     font-size: 0.7rem;
+     color: hsl(0, 87%, 15%);
+}
