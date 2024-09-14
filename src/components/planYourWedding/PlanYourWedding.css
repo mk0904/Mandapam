@@ -24,6 +24,7 @@
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
+     margin-bottom: 3rem;
    }
    
    .cardContainer {
@@ -38,7 +39,7 @@
 
    .cardContainer h1 {
      font-size: 2.2rem;
-     font-weight: 700;
+     font-weight: 500;
      color: hsl(0, 22%, 77%);
      margin-top: 2rem;
      margin-bottom: 4rem;
@@ -67,6 +68,9 @@
      align-items: flex-start;
      background-color: rgba(255, 255, 255, 0.67); /* Add slight transparency to cards */
    }
+   .card:hover{
+     background-color: rgba(255, 255, 255, 0.8);
+   }
    
    .cardInfo {
      display: flex;
@@ -79,6 +83,7 @@
    
    .cardInfo li{
      list-style-type: circle ;
+     margin-bottom: 5px;
    }
 
    .card button{
