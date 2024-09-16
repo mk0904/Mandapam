@@ -1,3 +1,11 @@
+import photographersImg from '../../images/3.jpeg';
+import catererImg from '../../images/catering.webp';
+import plannersanddecorators from '../../images/plannersadnddecorators.webp';
+import mehendiartists from '../../images/mehendi artists.jpeg';
+import bridalGrooming from '../../images/bridal grooming.jpeg';
+import performanceartists from '../../images/performance artists.avif';
+import panditimg from '../../images/pandits.avif';
+
 const basicPackage = {
      packageName: "Lāvaṇya (लावण्य)",
      shortDesc: "This is the basic package",
@@ -60,6 +68,17 @@ const premiumPackage = {
 //      performanceartists:{},
 //      pandits:{},
 // }
+
+
+const vendorCategories = [
+  { categoryName: 'Photographers', categoryDescription: 'Shot your bests', paramVar: 'photographers', image: photographersImg },
+  { categoryName: 'Caterers', categoryDescription: 'Get your guests the best servings', paramVar: 'caterers', image: catererImg },
+  { categoryName: 'Planners & Decorators', categoryDescription: 'Decorate your dream mandap', paramVar: 'planninganddecorators', image: plannersanddecorators },
+  { categoryName: 'Mehendi Artists', categoryDescription: 'Let your hand craft your love with henna', paramVar: 'mehendiartists', image: mehendiartists },
+  { categoryName: 'Bridal Grooming', categoryDescription: 'Brighten up Miss Bride', paramVar: 'bridalgrooming', image: bridalGrooming },
+  { categoryName: 'DJs & Performance Artists', categoryDescription: 'The party beginsss!', paramVar: 'performanceartists', image: performanceartists },
+  { categoryName: 'Pandits', categoryDescription: 'Traditions meets devotion in every ritual...', paramVar: 'pandits', image: panditimg },
+]
 
 const vendorData = {
      photographers: {
@@ -600,4 +619,4 @@ const vendorData = {
         }
    };
    
-export { basicPackage, standardPackage, premiumPackage, vendorData }
+export { basicPackage, standardPackage, premiumPackage, vendorData, vendorCategories }
