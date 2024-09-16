@@ -82,7 +82,15 @@ const vendorCategories = [
 
 const vendorData = {
      photographers: {
-          Goa: p,
+          Goa: {
+            id: 1,
+            name: 'Sunset Weddings Goa',
+            contact: '9876543210',
+            price: [75000, 150000],
+            pics: ['sunset_goa_1.jpg', 'sunset_goa_2.jpg', 'sunset_goa_3.jpg'],
+            datesoccupied: ['2024-10-01', '2024-12-10', '2025-01-05'],
+            rating: 4.6,
+          },
           JimCorbett: {
             id: 2,
             name: 'Corbett Memories Photography',
