@@ -18,7 +18,6 @@ function App() {
           <Route path="/plan-your-wedding" element={<PlanYourWedding/>} />
       </Routes>
       </BrowserRouter>
-      
     </div>
   );
 }

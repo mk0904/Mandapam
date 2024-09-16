@@ -3,8 +3,8 @@ import VendorPageCategory from '../vendorPageCategory/vendorPageCategory';
 
 function VendorsPage() {
   return (
-    <div className='hero'>
-      <div className=''></div>
+    <div className='heroNested'>
+      {/* <div className='heroNested'></div> */}
         <VendorPageCategory />
     </div>
   );

@@ -1,0 +1,153 @@
+.vendorPageComponent {
+     display: grid;
+     grid-template-columns: 1fr 180px;
+     align-items: center;
+     width: 450px;
+     height: 150px;
+     background-color: hsla(0, 87%, 25%, 0.118);
+     margin: 10px;
+     padding-left: 20px;
+     box-sizing: border-box;
+     overflow: hidden;
+     transition: transform 0.4s ease, box-shadow 0.4s ease;
+   }
+   
+   .vendorPageComponent:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   }
+   
+   .categoryInfo {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: left;
+   }
+   
+   .categoryInfo h1 {
+     font-size: 1.5rem;
+     margin: 0;
+     transition: color 0.4s ease;
+   }
+   
+   .categoryInfo p {
+     font-size: 1rem;
+     margin: 5px 0 0 0;
+     transition: color 0.4s ease;
+   }
+   
+   .vendorPageComponent:hover .categoryInfo h1, 
+   .vendorPageComponent:hover .categoryInfo p {
+     color: hsl(0, 87%, 25%);
+   }
+   
+   .categoryBackgroundImage {
+     width: 180px;
+     height: 150px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+   }
+   
+   .categoryBackgroundImage img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+     border-radius: 50% 0 0 50%;
+     transition: transform 0.4s ease, opacity 0.4s ease, filter 0.4s ease;
+   }
+   
+   .vendorPageComponent:hover .categoryBackgroundImage img {
+     transform: scale(1.1);
+     opacity: 0.9;
+     filter: brightness(1.2);
+   }
+   
+   @media screen and (max-width: 1228px) {
+     .vendorPageComponent {
+       grid-template-columns: 1fr 150px;
+       height: 120px;
+     }
+   
+     .categoryBackgroundImage {
+       width: 150px;
+       height: 120px;
+     }
+   
+     .categoryBackgroundImage img {
+       height: 120px;
+       width: 120px;
+     }
+   }
+   
+   @media screen and (max-width: 1100px) {
+     .vendorPageComponent {
+       width: 600px;
+       grid-template-columns: 1fr 120px;
+     }
+   
+     .categoryBackgroundImage {
+       width: 120px;
+     }
+   }
+   
+   @media screen and (max-width: 768px) {
+     .vendorPageComponent {
+       grid-template-columns: 1fr 120px;
+       height: 120px;
+       width: 350px;
+       align-items: flex-start;
+     }
+   
+     .vendorPageComponent h1 {
+       margin-top: 10px;
+     }
+   
+     .categoryBackgroundImage {
+       width: 120px;
+     }
+   }
+   
+   @media screen and (max-width: 610px) {
+     .vendorPageComponent {
+       width: 400px;
+       grid-template-columns: 1fr 120px;
+     }
+   
+     .categoryBackgroundImage {
+       width: 120px;
+     }
+   
+     .categoryBackgroundImage img {
+       height: 120px;
+       width: 130px;
+     }
+   }
+   
+   @media screen and (max-width: 450px) {
+     .vendorPageComponent {
+       width: 300px;
+       height: auto;
+       grid-template-columns: 1fr 150px;
+     }
+   
+     .categoryBackgroundImage {
+       width: 100%;
+       height: 150px;
+     }
+   
+     .categoryBackgroundImage img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+     }
+   
+     .vendorPageComponent h1 {
+       font-size: 1.2rem;
+     }
+   
+     .categoryInfo p {
+       font-size: 0.8rem;
+     }
+   }
+   
