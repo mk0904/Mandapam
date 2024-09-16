@@ -1,10 +1,10 @@
-import photographersImg from '../../images/3.jpeg';
-import catererImg from '../../images/catering.webp';
-import plannersanddecorators from '../../images/plannersadnddecorators.webp';
-import mehendiartists from '../../images/mehendi artists.jpeg';
-import bridalGrooming from '../../images/bridal grooming.jpeg';
-import performanceartists from '../../images/performance artists.avif';
-import panditimg from '../../images/pandits.avif';
+import photographersImg from '../images/3.jpeg';
+import catererImg from '../images/catering.webp';
+import plannersanddecorators from '../images/plannersadnddecorators.webp';
+import mehendiartists from '../images/mehendi artists.jpeg';
+import bridalGrooming from '../images/bridal grooming.jpeg';
+import performanceartists from '../images/performance artists.avif';
+import panditimg from '../images/pandits.avif';
 
 const basicPackage = {
      packageName: "Lāvaṇya (लावण्य)",
@@ -82,15 +82,7 @@ const vendorCategories = [
 
 const vendorData = {
      photographers: {
-          Goa: {
-            id: 1,
-            name: 'Sunset Weddings Goa',
-            contact: '9876543210',
-            price: [75000, 150000],
-            pics: ['sunset_goa_1.jpg', 'sunset_goa_2.jpg', 'sunset_goa_3.jpg'],
-            datesoccupied: ['2024-10-01', '2024-12-10', '2025-01-05'],
-            rating: 4.6,
-          },
+          Goa: p,
           JimCorbett: {
             id: 2,
             name: 'Corbett Memories Photography',
