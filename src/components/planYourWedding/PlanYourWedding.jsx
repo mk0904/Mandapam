@@ -1,7 +1,7 @@
 import PackagesCard from "../packagesCard/PackagesCard";
 import "./PlanYourWedding.css";
 import heroBgm from "../../images/planyourwedding.jpg";
-import {basicPackage, standardPackage, premiumPackage} from '../Data'
+import {basicPackage, standardPackage, premiumPackage} from '../../Data'
 
 function PlanYourWedding() {
 

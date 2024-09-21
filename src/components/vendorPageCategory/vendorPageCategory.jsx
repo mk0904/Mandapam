@@ -1,13 +1,13 @@
 import './vendorPageCategory.css';
 import VendorPageComponent from '../vendorPageComponent/VendorPageComponent';
-import { vendorCategories } from '../Data';
+import { vendorCategories } from '../../Data';
 
 function VendorPageCategory() {
 
   return (
     <div className='vendorPageCategory'>
       {vendorCategories.map((vendor, index) => (
-        <VendorPageComponent 
+        <VendorPageComponent
           key={index}
           props={{
             categoryName: vendor.categoryName,

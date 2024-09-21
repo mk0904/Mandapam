@@ -1,13 +1,15 @@
-import photographersImg from '../images/3.jpeg';
-import catererImg from '../images/catering.webp';
-import plannersanddecorators from '../images/plannersadnddecorators.webp';
-import mehendiartists from '../images/mehendi artists.jpeg';
-import bridalGrooming from '../images/bridal grooming.jpeg';
-import performanceartists from '../images/performance artists.avif';
-import panditimg from '../images/pandits.avif';
+import photographersImg from './images/3.jpeg';
+import catererImg from './images/catering.webp';
+import plannersanddecorators from './images/plannersadnddecorators.webp';
+import mehendiartists from './images/mehendi artists.jpeg';
+import bridalGrooming from './images/bridal grooming.jpeg';
+import performanceartists from './images/performance artists.avif';
+import panditimg from './images/pandits.avif';
+import photographersImgCard from './images/image.png';
 
 const basicPackage = {
      packageName: "Lāvaṇya (लावण्य)",
+     desc: 'Capturing the best moments of your life, making your wedding smile forever',
      shortDesc: "This is the basic package",
      price: "25,00,000 *",
      inclusions: [
@@ -26,6 +28,7 @@ const basicPackage = {
 
 const standardPackage = {
      packageName: "Shriṅgār (श्रृंगार)",
+     desc: 'Capturing the best moments of your life, making your wedding smile forever',
      shortDesc: "This is the standard package",
      price: "50,00,000 *",
      inclusions: [
@@ -73,550 +76,683 @@ const premiumPackage = {
 const vendorCategories = [
   { categoryName: 'Photographers', categoryDescription: 'Shot your bests', paramVar: 'photographers', image: photographersImg },
   { categoryName: 'Caterers', categoryDescription: 'Get your guests the best servings', paramVar: 'caterers', image: catererImg },
-  { categoryName: 'Planners & Decorators', categoryDescription: 'Decorate your dream mandap', paramVar: 'planninganddecorators', image: plannersanddecorators },
+  { categoryName: 'Planners & Decorators', categoryDescription: 'Decorate your dream mandap', paramVar: 'plannersanddecorators', image: plannersanddecorators },
   { categoryName: 'Mehendi Artists', categoryDescription: 'Let your hand craft your love with henna', paramVar: 'mehendiartists', image: mehendiartists },
   { categoryName: 'Bridal Grooming', categoryDescription: 'Brighten up Miss Bride', paramVar: 'bridalgrooming', image: bridalGrooming },
   { categoryName: 'DJs & Performance Artists', categoryDescription: 'The party beginsss!', paramVar: 'performanceartists', image: performanceartists },
   { categoryName: 'Pandits', categoryDescription: 'Traditions meets devotion in every ritual...', paramVar: 'pandits', image: panditimg },
 ]
 
-const vendorData = {
-     photographers: {
-          Goa: {
+const vendorData = [{
             id: 1,
+            category: 'photographers',
             name: 'Sunset Weddings Goa',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543210',
             price: [75000, 150000],
-            pics: ['sunset_goa_1.jpg', 'sunset_goa_2.jpg', 'sunset_goa_3.jpg'],
+            pics: [`${photographersImgCard}`, `https://image.wedmegood.com/resized/800X/uploads/member/73280/1631021841_293A4026_Recovered.jpg`, `${photographersImgCard}`],
             datesoccupied: ['2024-10-01', '2024-12-10', '2025-01-05'],
-            rating: 4.6,
+            rating: 4.5,
+            location: 'Goa'
           },
-          JimCorbett: {
+          {
             id: 2,
+            category: 'photographers',
             name: 'Corbett Memories Photography',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543221',
             price: [85000, 160000],
-            pics: ['corbett_memories_1.jpg', 'corbett_memories_2.jpg', 'corbett_memories_3.jpg'],
+            pics: ['corbett_memories_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'corbett_memories_3.jpg'],
             datesoccupied: ['2024-11-05', '2024-12-20', '2025-02-14'],
             rating: 4.7,
+            location: 'Jim Corbett'
           },
-          Udaipur: {
+          {
             id: 3,
+            category: 'photographers',
             name: 'Udaipur Royal Weddings',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543232',
             price: [120000, 250000],
-            pics: ['royal_udaipur_1.jpg', 'royal_udaipur_2.jpg', 'royal_udaipur_3.jpg'],
+            pics: ['royal_udaipur_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'royal_udaipur_3.jpg'],
             datesoccupied: ['2024-10-12', '2024-11-28', '2025-01-18'],
             rating: 4.8,
+            location: 'Udaipur'
           },
-          Jaipur: {
+          {
             id: 4,
+            category: 'photographers',
             name: 'Jaipur Wedding Frames',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543243',
             price: [100000, 220000],
-            pics: ['wedding_jaipur_1.jpg', 'wedding_jaipur_2.jpg', 'wedding_jaipur_3.jpg'],
+            pics: ['wedding_jaipur_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'wedding_jaipur_3.jpg'],
             datesoccupied: ['2024-09-25', '2024-12-05', '2025-01-20'],
             rating: 4.5,
+            location: 'Jaipur'
           },
-          Pune: {
+          {
             id: 5,
+            category: 'photographers',
             name: 'Dreamcatcher Weddings Pune',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543254',
             price: [150000, 250000],
-            pics: ['dreamcatcher_pune_1.jpg', 'dreamcatcher_pune_2.jpg', 'dreamcatcher_pune_3.jpg'],
+            pics: ['dreamcatcher_pune_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'dreamcatcher_pune_3.jpg'],
             datesoccupied: ['2024-10-20', '2024-12-18', '2025-01-25'],
             rating: 4.7,
+            location:'Pune'
           },
-          Mumbai: {
+          {
             id: 6,
+            category: 'photographers',
             name: 'Mumbai Wedding Diaries',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543265',
             price: [200000, 380000],
-            pics: ['wedding_mumbai_1.jpg', 'wedding_mumbai_2.jpg', 'wedding_mumbai_3.jpg'],
+            pics: ['wedding_mumbai_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'wedding_mumbai_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-11-15', '2025-01-05'],
             rating: 4.9,
+            location: 'Mumbai'
           },
-          Delhi: {
+          {
             id: 7,
+            category: 'photographers',
             name: 'Capital Wedding Moments',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543276',
             price: [140000, 260000],
-            pics: ['capital_wedding_1.jpg', 'capital_wedding_2.jpg', 'capital_wedding_3.jpg'],
+            pics: ['capital_wedding_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'capital_wedding_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-12-10', '2025-01-20'],
             rating: 4.7,
+            location: 'Delhi'
           },
-          Bangalore: {
+          {
             id: 8,
+            category: 'photographers',
             name: 'Heritage Weddings Bangalore',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543287',
             price: [60000, 120000],
-            pics: ['heritage_bangalore_1.jpg', 'heritage_bangalore_2.jpg', 'heritage_bangalore_3.jpg'],
+            pics: ['heritage_bangalore_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'heritage_bangalore_3.jpg'],
             datesoccupied: ['2024-09-20', '2024-11-15', '2024-12-28'],
             rating: 4.3,
+            location: 'Bangalore'
           },
-          Hyderabad: {
+          {
             id: 9,
+            category: 'photographers',
             name: 'Deccan Wedding Dreams',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543298',
             price: [195000, 330000],
-            pics: ['deccan_dreams_1.jpg', 'deccan_dreams_2.jpg', 'deccan_dreams_3.jpg'],
+            pics: ['deccan_dreams_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'deccan_dreams_3.jpg'],
             datesoccupied: ['2024-11-01', '2024-12-25', '2025-01-20'],
             rating: 4.8,
+            location: 'Hyderabad'
           },
-          Lucknow: {
+          {
             id: 10,
+            category: 'photographers',
             name: 'Royal Nawabi Weddings',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543309',
             price: [180000, 350000],
-            pics: ['nawabi_weddings_1.jpg', 'nawabi_weddings_2.jpg', 'nawabi_weddings_3.jpg'],
+            pics: ['nawabi_weddings_1.jpg', 'https://image.wedmegood.com/resized/800X/uploads/member/232385/1680537172_DSC06569.jpeg', 'nawabi_weddings_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-12-15', '2025-02-20'],
             rating: 4.8,
+            location: 'Lucknow'
           },
-        },
-     caterers: {
-          Goa: {
-            id: 1,
+          {
+            id: 11,
+            category: 'caterers',
             name: 'Goa Feast Caterers',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876544310',
             price: [150000, 300000],
             pics: ['goa_feast_1.jpg', 'goa_feast_2.jpg', 'goa_feast_3.jpg'],
             datesoccupied: ['2024-10-10', '2024-11-20', '2024-12-30'],
             rating: 4.5,
+            location: 'Goa'
           },
-          Jaipur: {
-            id: 2,
+          {
+            id: 12,
+            category: 'caterers',
             name: 'Jaipur Royal Cuisine',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9988776655',
             price: [200000, 400000],
             pics: ['jaipur_royal_1.jpg', 'jaipur_royal_2.jpg', 'jaipur_royal_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-12-01', '2024-12-18'],
             rating: 4.7,
+            location: 'Jaipur'
           },
-          Udaipur: {
-            id: 3,
+          {
+            id: 13,
+            category: 'caterers',
             name: 'Udaipur Food Paradise',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876541234',
             price: [180000, 350000],
             pics: ['udaipur_food_1.jpg', 'udaipur_food_2.jpg', 'udaipur_food_3.jpg'],
             datesoccupied: ['2024-11-02', '2024-12-15', '2024-12-25'],
             rating: 4.6,
+            location: 'Udaipur'
           },
-          Pune: {
-            id: 4,
+          {
+            id: 14,
+            category: 'caterers',
             name: 'Pune Flavor Caterers',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9898981234',
             price: [160000, 320000],
             pics: ['pune_flavor_1.jpg', 'pune_flavor_2.jpg', 'pune_flavor_3.jpg'],
             datesoccupied: ['2024-09-12', '2024-11-25', '2024-12-20'],
             rating: 4.4,
+            location: 'Pune'
           },
-          Delhi: {
-            id: 5,
+          {
+            id: 15,
+            category: 'caterers',
             name: 'Delhi Grand Feasts',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9998887777',
             price: [250000, 500000],
             pics: ['delhi_grand_1.jpg', 'delhi_grand_2.jpg', 'delhi_grand_3.jpg'],
             datesoccupied: ['2024-10-15', '2024-11-22', '2024-12-30'],
             rating: 4.8,
+            location: 'Delhi'
           },
-          Hyderabad: {
-            id: 6,
+          {
+            id: 16,
+            category: 'caterers',
             name: 'Hyderabad Nawabi Treats',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9123456789',
             price: [230000, 450000],
             pics: ['hyderabad_nawabi_1.jpg', 'hyderabad_nawabi_2.jpg', 'hyderabad_nawabi_3.jpg'],
             datesoccupied: ['2024-10-25', '2024-11-10', '2024-12-18'],
             rating: 4.9,
+            location: 'Hyderabad'
           },
-          Bangalore: {
-            id: 7,
+          {
+            id: 17,
+            category: 'caterers',
             name: 'Bangalore Wedding Caterers',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9101112131',
             price: [190000, 380000],
             pics: ['bangalore_caterers_1.jpg', 'bangalore_caterers_2.jpg', 'bangalore_caterers_3.jpg'],
             datesoccupied: ['2024-10-08', '2024-11-17', '2024-12-29'],
             rating: 4.7,
+            location: 'Bangalore'
           },
-          Lucknow: {
-            id: 8,
+          {
+            id: 18,
+            category: 'caterers',
             name: 'Lucknow Shahi Caterers',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9234567890',
             price: [170000, 340000],
             pics: ['lucknow_shahi_1.jpg', 'lucknow_shahi_2.jpg', 'lucknow_shahi_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-10-20', '2024-12-05'],
             rating: 4.6,
+            location: 'Lucknow'
           },
-        },
-     planninganddecorators: {
-          Goa: {
-            id: 1,
+          {
+            id: 19,
+            category: 'plannersanddecorators',
             name: 'Goa Wedding Planners',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543201',
             price: [400000, 800000],
             pics: ['goa_planner_1.jpg', 'goa_planner_2.jpg', 'goa_planner_3.jpg'],
             datesoccupied: ['2024-09-18', '2024-10-29', '2024-12-14'],
             rating: 4.8,
+            location: 'Goa'
           },
-          Jaipur: {
-            id: 2,
+          {
+            id: 20,
+            category: 'plannersanddecorators',
             name: 'Jaipur Royal Decorations',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9988665544',
             price: [500000, 1000000],
             pics: ['jaipur_decor_1.jpg', 'jaipur_decor_2.jpg', 'jaipur_decor_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-11-22', '2024-12-18'],
             rating: 4.9,
+            location: 'Jaipur'
           },
-          Udaipur: {
-            id: 3,
+          {
+            id: 21,
+            category: 'plannersanddecorators',
             name: 'Udaipur Wedding Stylists',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '8765432109',
             price: [450000, 900000],
             pics: ['udaipur_planner_1.jpg', 'udaipur_planner_2.jpg', 'udaipur_planner_3.jpg'],
             datesoccupied: ['2024-09-25', '2024-11-10', '2024-12-22'],
             rating: 4.7,
+            location: 'Udaipur'
           },
-          Pune: {
-            id: 4,
+          {
+            id: 22,
+            category: 'plannersanddecorators',
             name: 'Pune Grand Decorations',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9123451234',
             price: [350000, 700000],
             pics: ['pune_planner_1.jpg', 'pune_planner_2.jpg', 'pune_planner_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-11-15', '2024-12-25'],
             rating: 4.5,
+            location: 'Pune'
           },
-          Delhi: {
-            id: 5,
+          {
+            id: 23,
+            category: 'plannersanddecorators',
             name: 'Delhi Wedding Experts',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9998886666',
             price: [600000, 1200000],
             pics: ['delhi_decor_1.jpg', 'delhi_decor_2.jpg', 'delhi_decor_3.jpg'],
             datesoccupied: ['2024-10-15', '2024-11-18', '2024-12-30'],
             rating: 5.0,
+            location: 'Delhi'
           },
-          Hyderabad: {
-            id: 6,
+          {
+            id: 24,
+            category: 'plannersanddecorators',
             name: 'Hyderabad Regal Events',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876501234',
             price: [550000, 1100000],
             pics: ['hyderabad_planner_1.jpg', 'hyderabad_planner_2.jpg', 'hyderabad_planner_3.jpg'],
             datesoccupied: ['2024-10-22', '2024-11-12', '2024-12-20'],
             rating: 4.8,
+            location: 'Hyderabad'
           },
-          Bangalore: {
-            id: 7,
-            name: 'Bangalore Dream Weddings',
-            contact: '9101234567',
-            price: [500000, 950000],
-            pics: ['bangalore_decor_1.jpg', 'bangalore_decor_2.jpg', 'bangalore_decor_3.jpg'],
-            datesoccupied: ['2024-09-29', '2024-11-11', '2024-12-29'],
-            rating: 4.9,
-          },
-          Lucknow: {
-            id: 8,
+          {
+            id: 25,
+            category: 'plannersanddecorators',
             name: 'Lucknow Heritage Decorators',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9234561234',
             price: [400000, 850000],
             pics: ['lucknow_planner_1.jpg', 'lucknow_planner_2.jpg', 'lucknow_planner_3.jpg'],
             datesoccupied: ['2024-10-08', '2024-11-28', '2024-12-15'],
             rating: 4.7,
+            location: 'Lucknow'
           },
-        },
-     mehendiartists: {
-          Goa: {
-            id: 1,
-            name: 'Goa Mehendi Artistry',
-            contact: '9898989898',
-            price: [25000, 60000],
-            pics: ['goa_mehendi_1.jpg', 'goa_mehendi_2.jpg', 'goa_mehendi_3.jpg'],
-            datesoccupied: ['2024-09-21', '2024-10-16', '2024-12-05'],
-            rating: 4.5,
-          },
-          Jaipur: {
-            id: 2,
+          {
+            id: 26,
+            category: 'mehendiartists',
             name: 'Jaipur Mehendi Experts',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9809809809',
             price: [30000, 70000],
             pics: ['jaipur_mehendi_1.jpg', 'jaipur_mehendi_2.jpg', 'jaipur_mehendi_3.jpg'],
             datesoccupied: ['2024-10-10', '2024-11-05', '2024-12-20'],
             rating: 4.6,
+            location: 'Jaipur'
           },
-          Udaipur: {
-            id: 3,
+          {
+            id: 27,
+            category: 'mehendiartists',
             name: 'Udaipur Mehendi Creations',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9709709709',
             price: [20000, 50000],
             pics: ['udaipur_mehendi_1.jpg', 'udaipur_mehendi_2.jpg', 'udaipur_mehendi_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-10-25', '2024-12-15'],
             rating: 4.7,
+            location: 'Udaipur'
           },
-          Pune: {
-            id: 4,
+          {
+            id: 28,
+            category: 'mehendiartists',
             name: 'Pune Mehendi Artists',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9609609609',
             price: [35000, 80000],
             pics: ['pune_mehendi_1.jpg', 'pune_mehendi_2.jpg', 'pune_mehendi_3.jpg'],
             datesoccupied: ['2024-10-15', '2024-11-22', '2024-12-12'],
             rating: 4.4,
+            location: 'Pune'
           },
-          Delhi: {
-            id: 5,
+          {
+            id: 29,
             name: 'Delhi Mehendi Designers',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9119119119',
             price: [40000, 90000],
             pics: ['delhi_mehendi_1.jpg', 'delhi_mehendi_2.jpg', 'delhi_mehendi_3.jpg'],
             datesoccupied: ['2024-10-20', '2024-11-10', '2024-12-25'],
             rating: 4.8,
+            location: 'Delhi'
           },
-          Hyderabad: {
-            id: 6,
+          {
+            id: 30,
+            category: 'mehendiartists',
             name: 'Hyderabad Mehendi Art',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9209209209',
             price: [30000, 60000],
             pics: ['hyderabad_mehendi_1.jpg', 'hyderabad_mehendi_2.jpg', 'hyderabad_mehendi_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-11-15', '2024-12-18'],
             rating: 4.6,
+            location: 'Hyderabad'
           },
-          Bangalore: {
-            id: 7,
+          {
+            id: 31,
+            category: 'mehendiartists',
             name: 'Bangalore Mehendi Experts',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9309309309',
             price: [25000, 70000],
             pics: ['bangalore_mehendi_1.jpg', 'bangalore_mehendi_2.jpg', 'bangalore_mehendi_3.jpg'],
             datesoccupied: ['2024-09-28', '2024-11-02', '2024-12-10'],
             rating: 4.7,
+            location: 'Bangalore'
           },
-          Lucknow: {
-            id: 8,
+          {
+            id: 32,
+            category: 'mehendiartists',
             name: 'Lucknow Mehendi Artisans',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9409409409',
             price: [20000, 50000],
             pics: ['lucknow_mehendi_1.jpg', 'lucknow_mehendi_2.jpg', 'lucknow_mehendi_3.jpg'],
             datesoccupied: ['2024-09-15', '2024-10-30', '2024-12-07'],
             rating: 4.5,
+            location: 'Lucknow'
           },
-        },
-     bridalgrooming: {
-          Goa: {
-            id: 1,
+          {
+            id: 33,
+            category: 'bridalgrooming',
             name: 'Goa Bridal Elegance',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9912345678',
             price: [30000, 80000],
             pics: ['goa_bridal_1.jpg', 'goa_bridal_2.jpg', 'goa_bridal_3.jpg'],
             datesoccupied: ['2024-10-01', '2024-11-12', '2024-12-20'],
             rating: 4.5,
+            location: 'Goa'
           },
-          Jaipur: {
-            id: 2,
+          {
+            id: 34,
+            category: 'bridalgrooming',
             name: 'Jaipur Bridal Beauty',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9923456789',
             price: [35000, 90000],
             pics: ['jaipur_bridal_1.jpg', 'jaipur_bridal_2.jpg', 'jaipur_bridal_3.jpg'],
             datesoccupied: ['2024-09-15', '2024-10-25', '2024-12-15'],
             rating: 4.6,
+            location: 'Jaipur'
           },
-          Udaipur: {
-            id: 3,
+          {
+            id: 35,
+            category: 'bridalgrooming',
             name: 'Udaipur Bridal Artistry',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9934567890',
             price: [25000, 70000],
             pics: ['udaipur_bridal_1.jpg', 'udaipur_bridal_2.jpg', 'udaipur_bridal_3.jpg'],
             datesoccupied: ['2024-09-25', '2024-11-05', '2024-12-10'],
             rating: 4.7,
+            location: 'Udaipur'
           },
-          Pune: {
-            id: 4,
+          {
+            id: 36,
+            category: 'bridalgrooming',
             name: 'Pune Bridal Glamour',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9945678901',
             price: [28000, 75000],
             pics: ['pune_bridal_1.jpg', 'pune_bridal_2.jpg', 'pune_bridal_3.jpg'],
             datesoccupied: ['2024-10-10', '2024-11-20', '2024-12-15'],
             rating: 4.4,
+            location: 'Pune'
           },
-          Delhi: {
-            id: 5,
+          {
+            id: 37,
+            category: 'bridalgrooming',
             name: 'Delhi Bridal Studio',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9956789012',
             price: [35000, 90000],
             pics: ['delhi_bridal_1.jpg', 'delhi_bridal_2.jpg', 'delhi_bridal_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-10-15', '2024-12-25'],
             rating: 4.8,
+            location: 'Delhi'
           },
-          Hyderabad: {
-            id: 6,
+          {
+            id: 38,
+            category: 'bridalgrooming',
             name: 'Hyderabad Bridal Experts',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9967890123',
             price: [27000, 70000],
             pics: ['hyderabad_bridal_1.jpg', 'hyderabad_bridal_2.jpg', 'hyderabad_bridal_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-11-10', '2024-12-12'],
             rating: 4.6,
+            location: 'Hyderabad'
           },
-          Bangalore: {
-            id: 7,
+          {
+            id: 39,
+            category: 'bridalgrooming',
             name: 'Bangalore Bridal Magic',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9978901234',
             price: [32000, 80000],
             pics: ['bangalore_bridal_1.jpg', 'bangalore_bridal_2.jpg', 'bangalore_bridal_3.jpg'],
             datesoccupied: ['2024-09-18', '2024-10-22', '2024-12-05'],
             rating: 4.7,
+            location: 'Bangalore'
           },
-          Lucknow: {
-            id: 8,
+          {
+            id: 40,
+            category: 'bridalgrooming',
             name: 'Lucknow Bridal Charm',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9989012345',
             price: [29000, 75000],
             pics: ['lucknow_bridal_1.jpg', 'lucknow_bridal_2.jpg', 'lucknow_bridal_3.jpg'],
             datesoccupied: ['2024-10-01', '2024-11-05', '2024-12-18'],
             rating: 4.5,
+            location: 'Lucknow'
           },
-        },
-     performanceartists: {
-          Goa: {
-            id: 1,
+     {
+            id: 41,
+            category: 'performanceartists',
             name: 'Goa Dance Ensemble',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9912345678',
             price: [250000, 350000],
             pics: ['goa_performance_1.jpg', 'goa_performance_2.jpg', 'goa_performance_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-11-12', '2024-12-20'],
             rating: 4.6,
+            location: 'Goa'
           },
-          Jaipur: {
-            id: 2,
+          {
+            id: 42,
+            category: 'performanceartists',
             name: 'Jaipur Royal Performers',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9923456789',
             price: [280000, 370000],
             pics: ['jaipur_performance_1.jpg', 'jaipur_performance_2.jpg', 'jaipur_performance_3.jpg'],
             datesoccupied: ['2024-09-18', '2024-11-01', '2024-12-15'],
             rating: 4.7,
+            location: 'Jaipur'
           },
-          Udaipur: {
-            id: 3,
+          {
+            id: 43,
+            category: 'performanceartists',
             name: 'Udaipur Cultural Arts',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9934567890',
             price: [220000, 340000],
             pics: ['udaipur_performance_1.jpg', 'udaipur_performance_2.jpg', 'udaipur_performance_3.jpg'],
             datesoccupied: ['2024-10-10', '2024-11-20', '2024-12-25'],
             rating: 4.5,
+            location: 'Udaipur'
           },
-          Pune: {
-            id: 4,
+          {
+            id: 44,
+            category: 'performanceartists',
             name: 'Pune Artistic Wonders',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9945678901',
             price: [240000, 360000],
             pics: ['pune_performance_1.jpg', 'pune_performance_2.jpg', 'pune_performance_3.jpg'],
             datesoccupied: ['2024-09-25', '2024-11-05', '2024-12-15'],
             rating: 4.4,
+            location: 'Pune'
           },
-          Delhi: {
-            id: 5,
+          {
+            id: 45,
+            category: 'performanceartists',
             name: 'Delhi Performance Group',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9956789012',
             price: [260000, 380000],
             pics: ['delhi_performance_1.jpg', 'delhi_performance_2.jpg', 'delhi_performance_3.jpg'],
             datesoccupied: ['2024-09-30', '2024-11-15', '2024-12-20'],
             rating: 4.8,
+            location: 'Delhi'
           },
-          Hyderabad: {
-            id: 6,
+          {
+            id: 46,
+            category: 'performanceartists',
             name: 'Hyderabad Stage Magic',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9967890123',
             price: [230000, 340000],
             pics: ['hyderabad_performance_1.jpg', 'hyderabad_performance_2.jpg', 'hyderabad_performance_3.jpg'],
             datesoccupied: ['2024-10-05', '2024-11-10', '2024-12-12'],
             rating: 4.6,
+            location: 'Hyderabad'
           },
-          Bangalore: {
-            id: 7,
+          {
+            id: 47,
+            category: 'performanceartists',
             name: 'Bangalore Talent Showcase',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9978901234',
             price: [250000, 370000],
             pics: ['bangalore_performance_1.jpg', 'bangalore_performance_2.jpg', 'bangalore_performance_3.jpg'],
             datesoccupied: ['2024-09-20', '2024-10-25', '2024-12-05'],
             rating: 4.7,
+            location: 'Bangalore'
           },
-          Lucknow: {
-            id: 8,
+          {
+            id: 48,
+            category: 'performanceartists',
             name: 'Lucknow Performance Art',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9989012345',
             price: [240000, 350000],
             pics: ['lucknow_performance_1.jpg', 'lucknow_performance_2.jpg', 'lucknow_performance_3.jpg'],
             datesoccupied: ['2024-10-01', '2024-11-10', '2024-12-18'],
             rating: 4.5,
+            location: 'Lucknow'
           },
-        },
-     pandits: {
-          Goa: {
-            id: 1,
+          {
+            id: 49,
+            category: 'pandits',
             name: 'Pandit Ravi Sharma',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9812345678',
             price: [25000, 50000],
             pics: ['goa_pandit_1.jpg', 'goa_pandit_2.jpg'],
             datesoccupied: ['2024-10-10', '2024-11-25', '2024-12-15'],
             rating: 4.5,
+            location: 'Goa'
           },
-          Jaipur: {
-            id: 2,
+          {
+            id: 50,
+            category: 'pandits',
             name: 'Pandit Ramesh Kumar',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9823456789',
             price: [30000, 60000],
             pics: ['jaipur_pandit_1.jpg', 'jaipur_pandit_2.jpg'],
             datesoccupied: ['2024-09-20', '2024-11-10', '2024-12-05'],
             rating: 4.7,
+            location: 'Jaipur'
           },
-          Udaipur: {
-            id: 3,
+          {
+            id: 51,
+            category: 'pandits',
             name: 'Pandit Anil Joshi',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9834567890',
             price: [40000, 70000],
             pics: ['udaipur_pandit_1.jpg', 'udaipur_pandit_2.jpg'],
             datesoccupied: ['2024-10-15', '2024-11-20', '2024-12-12'],
             rating: 4.6,
+            location: 'Udaipur'
           },
-          Pune: {
-            id: 4,
+          {
+            id: 52,
+            category: 'pandits',
             name: 'Pandit Sanjay Deshmukh',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9845678901',
             price: [35000, 65000],
             pics: ['pune_pandit_1.jpg', 'pune_pandit_2.jpg'],
             datesoccupied: ['2024-10-01', '2024-11-05', '2024-12-18'],
             rating: 4.4,
+            location: 'Pune'
           },
-          Delhi: {
-            id: 5,
+          {
+            id: 53,
+            category: 'pandits',
             name: 'Pandit Ajay Sharma',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9856789012',
             price: [30000, 80000],
             pics: ['delhi_pandit_1.jpg', 'delhi_pandit_2.jpg'],
             datesoccupied: ['2024-09-25', '2024-11-15', '2024-12-20'],
             rating: 4.8,
+            location: 'Delhi'
           },
-          Hyderabad: {
-            id: 6,
+          {
+            id: 54,
+            category: 'pandits',
             name: 'Pandit Krishna Rao',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9867890123',
             price: [20000, 55000],
             pics: ['hyderabad_pandit_1.jpg', 'hyderabad_pandit_2.jpg'],
             datesoccupied: ['2024-10-10', '2024-11-30', '2024-12-15'],
             rating: 4.5,
+            location  : 'Hyderabad'
           },
-          Bangalore: {
-            id: 7,
+          {
+            id: 55,
+            category: 'pandits',
             name: 'Pandit Gopal Hegde',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9878901234',
             price: [40000, 75000],
             pics: ['bangalore_pandit_1.jpg', 'bangalore_pandit_2.jpg'],
             datesoccupied: ['2024-10-05', '2024-11-12', '2024-12-10'],
             rating: 4.6,
+            location: 'Bangalore'
           },
-          Lucknow: {
-            id: 8,
+          {
+            id: 56,
+            category: 'pandits',
             name: 'Pandit Sunil Agarwal',
+            desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9889012345',
             price: [35000, 70000],
             pics: ['lucknow_pandit_1.jpg', 'lucknow_pandit_2.jpg'],
             datesoccupied: ['2024-10-20', '2024-11-05', '2024-12-25'],
             rating: 4.4,
-          },
-        }
-   };
+            location: 'Lucknow'
+          }]
    
 export { basicPackage, standardPackage, premiumPackage, vendorData, vendorCategories }
