@@ -9,20 +9,23 @@
 
 .filterComponent {
   position: fixed;
-  padding: 20px;
+  padding: 10px;
   background-color: #f9f9f9;
   border-radius: 5px;
   height: 75%;
+  max-width: 200px;
 }
 
 .filterToggleButton {
   display: block;
+  width: 100%;
   background-color: #007bff;
   color: white;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .filterToggleButton:hover {
@@ -40,17 +43,15 @@
   margin-bottom: 15px;
 }
 
-/* Mobile Specific Styles */
 @media (max-width: 368px) {
   .filterPage{
     display: flex;
     justify-content: center;
-    z-index: 1;
     height: 80%;
     width: 300px;
   }
   .filterComponent {
-    padding: 10px;
+    padding: 1px;
     height: 80%;
     width: 62%;
   }

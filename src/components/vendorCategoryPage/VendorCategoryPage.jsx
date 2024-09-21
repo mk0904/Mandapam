@@ -2,7 +2,7 @@ import './VendorCategoryPage.css';
 import CardComponent from "../heroCard/CardComponent";
 import FilterComponent from '../filterComponent/FilterComponent';
 import { vendorData } from '../../Data';
-import { useState } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 
 function VendorCategoryPage() {
@@ -10,42 +10,55 @@ function VendorCategoryPage() {
      const [city, setCity] = useState('');
      const [rating, setRating] = useState('');
      const [sortBy, setSortBy] = useState('');
+     const [currentPage, setCurrentPage] = useState(1);
+     const [cardsPerPage, setCardsPerPage] = useState(12); // Default for desktop
 
-     const filteredVendors = vendorData
-          .filter(vendor => {
-               return city ? vendor.location === city : true;
-          })
-          .filter(vendor => {
-               return rating ? vendor.rating >= rating : true;
-          })
-          .sort((a, b) => {
-               if (sortBy === 'pricehightolow') {
-                    return b.price[0] - a.price[0];
+     // Dynamically set the number of cards per page based on screen size
+     useEffect(() => {
+          const updateCardsPerPage = () => {
+               if (window.innerWidth <= 620) {
+                    setCardsPerPage(9); // Phones/Tablets
+               } else {
+                    setCardsPerPage(12); // Desktop
                }
-               if (sortBy === 'pricelowtohigh') {
-                    return a.price[0] - b.price[0];
-               }
-               if (sortBy === 'ratinghightolow') {
-                    return b.rating - a.rating;
-               }
-               if (sortBy === 'nameatoz') {
-                    return a.name.localeCompare(b.name);
-               }
-               if (sortBy === 'nameztoa') {
-                    return b.name.localeCompare(a.name);
-               }
-          });
+          };
+
+          window.addEventListener('resize', updateCardsPerPage);
+          updateCardsPerPage(); // Initialize on first render
+
+          return () => window.removeEventListener('resize', updateCardsPerPage);
+     }, []);
+
+     // Memoized filtered and sorted vendors to avoid recalculating on each render
+     const filteredVendors = useMemo(() => {
+          return vendorData
+               .filter(vendor => city ? vendor.location === city : true)
+               .filter(vendor => rating ? vendor.rating >= rating : true)
+               .sort((a, b) => {
+                    if (sortBy === 'pricehightolow') return b.price[0] - a.price[0];
+                    if (sortBy === 'pricelowtohigh') return a.price[0] - b.price[0];
+                    if (sortBy === 'ratinghightolow') return b.rating - a.rating;
+                    if (sortBy === 'nameatoz') return a.name.localeCompare(b.name);
+                    if (sortBy === 'nameztoa') return b.name.localeCompare(a.name);
+                    return 0;
+               });
+     }, [city, rating, sortBy]);
+
+     // Pagination Logic
+     const indexOfLastVendor = currentPage * cardsPerPage;
+     const indexOfFirstVendor = indexOfLastVendor - cardsPerPage;
+     const currentVendors = filteredVendors.slice(indexOfFirstVendor, indexOfLastVendor);
+
+     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
      return (
-          <div className="heroCategoryPage">
-               <div className='filterPart'>
+          <div className="vendorCategoryGrid">
+               <div className="filterPart">
                     <FilterComponent setCity={setCity} setRating={setRating} setSortBy={setSortBy} />
                </div>
-               
-
-               <div className='parentFilterandCards'>
-                    <div className='cardList'>
-                         {filteredVendors.filter(vendor => vendor.category === category).map((vendor, index) => (
+               <div className='mainDiv'>
+                    <div className="cardList">
+                         {currentVendors.map((vendor, index) => (
                               <CardComponent
                                    key={index}
                                    props={{
@@ -58,6 +71,20 @@ function VendorCategoryPage() {
                                    }}
                               />
                          ))}
+                    </div>
+
+                    {/* Pagination */}
+                    <div className="pagination">
+                         {currentPage > 1 && (
+                              <button onClick={() => paginate(currentPage - 1)}>
+                                   Previous
+                              </button>
+                         )}
+                         {currentPage < Math.ceil(filteredVendors.length / cardsPerPage) && (
+                              <button onClick={() => paginate(currentPage + 1)}>
+                                   Next
+                              </button>
+                         )}
                     </div>
                </div>
           </div>

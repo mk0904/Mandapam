@@ -12,7 +12,7 @@ const FilterComponent = ({ setCity, setSortBy }) => {
   const cities = ['Goa', 'Jim Corbett', 'Udaipur', 'Jaipur', 'Pune', 'Mumbai', 'Delhi', 'Bangalore', 'Lucknow', 'Hyderabad'];
   const sortOptions = [
     { label: 'Price - Low to High', value: 'pricelowtohigh' },
-    { label: 'Rating', value: 'rating' },
+    { label: 'Rating', value: 'ratinghightolow' },
     { label: 'Price - High to Low', value: 'pricehightolow' },
     { label: 'Alphabetical - A to Z', value: 'nameatoz' },
     { label: 'Alphabetical - Z to A', value: 'nameztoa' },
@@ -20,7 +20,7 @@ const FilterComponent = ({ setCity, setSortBy }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 468) {
+      if (window.innerWidth <= 620) {
         setIsFilterVisible(false);
       } else {
         setIsFilterVisible(true);
@@ -36,7 +36,7 @@ const FilterComponent = ({ setCity, setSortBy }) => {
     e.preventDefault();
     setCity(selectedCity);
     setSortBy(sortBy);
-    if (window.innerWidth <= 768) setIsFilterVisible(false);
+    if (window.innerWidth <= 620) setIsFilterVisible(false);
   };
 
   const handleClearFilters = () => {
@@ -53,7 +53,7 @@ const FilterComponent = ({ setCity, setSortBy }) => {
 
   return (
     <div className='filterPage'>
-      {window.innerWidth <= 768 && (
+      {window.innerWidth <= 620 && (
         <button 
           className="filterToggleButton" 
           onClick={toggleFilterVisibility}

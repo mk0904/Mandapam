@@ -5,24 +5,23 @@
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 330px;
-  min-height: 408px;
-  min-width: 353px;
-  padding: 10px;
+  max-width: 100%;
+  min-height: 428px;
+  padding: 15px;
   box-sizing: border-box;
   margin: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ComponentCard:hover {
+  transform: scale(1.03);
 }
 
 .ComponentCardImage {
-  position: relative;
-  top: 0px;
   width: 100%;
   max-height: 210px;
-  height: auto;
   border-radius: 5px;
   object-fit: cover;
-  justify-content: center;
-  align-items: center;
 }
 
 .ComponentCardImage img {
@@ -34,26 +33,42 @@
 
 .ComponentCardHeader {
   display: flex;
-  flex-direction: row;
-  width: 100%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 10px;
   margin-bottom: 4px;
+  width: 100%;
+}
+.ComponentCardHeader h1{
+  text-align: start;
 }
 
-.ComponentCardHeader h4{
-  margin: 2px;
-  color: #666;
-  background-color: hsl;
-}
-
-.ComponentCardRating {
+.ratingDiv {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  justify-content: center;
+  width: fit-content;
+  height: 25px;
+  border-radius: 2px;
+  margin: 2px;
+  color: #292929;
+  background-color: hsla(0, 86%, 19%, 0.078);
+  padding: 2px 5px;
+}
+.ratingDiv h4{
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 6px;
 }
 
+.ComponentCardInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 0px;
+  height: fit-content;
+}
 .ComponentCardInfo h1 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -61,13 +76,7 @@
   color: #333;
 }
 
-.ComponentCardName h4 {
-  margin: 0;
-  color: #666;
-}
-
 .ComponentCardLocation {
-  width: fit-content;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -76,13 +85,7 @@
   padding: 5px 10px;
   margin-top: 0px;
   margin-bottom: 10px;
-}
-
-.ComponentCardInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  width: fit-content;
 }
 
 .locationIcon {
@@ -103,37 +106,84 @@
 
 .ComponentCardDesc {
   font-size: 0.9rem;
-  text-align: start;
   color: #666;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  text-align: start;
 }
 
-.ComponentCardDesc p {
-  margin-bottom: 0px;
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) and (min-width: 480px) {
   .ComponentCard {
-    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 10px 10px;
+    min-height: 230px;
+    max-height: 230px;
   }
 
-  .ComponentCardName h1 {
-    font-size: 1.25rem;
+  .ComponentCardInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    height: fit-content;
   }
 
-  .ComponentCardRating .star {
-    font-size: 1.2rem;
+  .ComponentCardImage img{
+    margin: 5px;
   }
 
-  .ComponentCardLocation {
-    font-size: 0.85rem;
+  .ComponentCardInfo h1 {
+    font-size: 1.3rem;
+    text-align: start;
+    margin-right: 10px;
   }
 
   .ComponentCardPrice {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .ComponentCardDesc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .ComponentCard {
+    max-width: 300px;
+    padding: 8px;
+    margin: 10px;
+    min-height: 378px;
+    max-height: 378px;
+  }
+
+  .ComponentCardImage img {
+    height: 180px;
+  }
+
+  .cardList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ComponentCardInfo h1 {
+    font-size: 1.1rem;
+  }
+
+  .ComponentCardPrice {
+    font-size: 1rem;
+  }
+
+  .ComponentCardLocation {
+    font-size: 0.8rem;
+  }
+
+  .ComponentCardDesc {
+    font-size: 0.8rem;
   }
 }
