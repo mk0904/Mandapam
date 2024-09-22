@@ -3,6 +3,8 @@ import './FilterComponent.css';
 import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
 import { Rating } from '@mui/material';
+import { FaFilter } from 'react-icons/fa';
+import { RiCloseLargeLine } from "react-icons/ri";
 
 const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, rating, setRating }) => {
   const [isFilterVisible, setIsFilterVisible] = useState(true);
@@ -68,7 +70,7 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
           onClick={toggleFilterVisibility}
           style={{ display: 'block', marginBottom: '10px' }}
         >
-          {isFilterVisible ? 'Hide Filters' : 'Show Filters'}
+          {isFilterVisible ? <RiCloseLargeLine/> : <FaFilter/>}
         </button>
       )}
 
@@ -120,7 +122,7 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
             </div>
 
             <div className="filterButtons">
-            {window.innerWidth <= 620 && <button type="submit" className="filterButton">close</button>}
+            {window.innerWidth <= 620 && <button type="submit" className="filterButton">Apply Filters</button>}
               <button type="button" className="clearButton" onClick={handleClearFilters}>Clear All</button>
             </div>
           </form>
