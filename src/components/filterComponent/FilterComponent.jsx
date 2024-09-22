@@ -5,10 +5,11 @@ import { Calendar } from 'primereact/calendar';
 import { FaFilter } from 'react-icons/fa';
 import { RiCloseLargeLine } from "react-icons/ri";
 
-const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, rating, setRating, guests, setGuests, rooms, setRooms }) => {
+const FilterComponent = ({ flag, city, setCity, sortBy, setSortBy, dates, setDates, rating, setRating, guests, setGuests }) => {
   const [isFilterVisible, setIsFilterVisible] = useState(true);
 
   const cities = ['Goa', 'Jim Corbett', 'Udaipur', 'Jaipur', 'Pune', 'Mumbai', 'Delhi', 'Bangalore', 'Lucknow', 'Hyderabad'];
+  
   const sortOptions = [
     { label: 'Price - Low to High', value: 'pricelowtohigh' },
     { label: 'Rating', value: 'ratinghightolow' },
@@ -16,6 +17,14 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
     { label: 'Alphabetical - A to Z', value: 'nameatoz' },
     { label: 'Alphabetical - Z to A', value: 'nameztoa' },
   ];
+  if (flag === 'resort') {
+    sortOptions.push({ label: 'Price - Low to High (Non-Veg)', value: 'pricelowtohighnonveg' });
+    sortOptions.push({ label: 'Price - High to low (Non-Veg)', value: 'pricehightolownonveg' });
+    sortOptions.push({ label: 'No. of guests (Least)', value: 'guestsleast' })
+    sortOptions.push({ label: 'No. of guests (Most)', value: 'guestsmost' });
+    sortOptions.push({ label: 'No. of most Rooms', value: 'mostrooms' });
+    sortOptions.push({ label: 'No. of least Rooms', value: 'leastrooms' });
+  }
   const ratingOptions = [
      { label: '4.5 or more', value: '4.5' },
      { label: '3 or more', value: '3' },
@@ -51,7 +60,7 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
   const handleClearFilters = () => {
     setCity('');
     setSortBy('');
-    setDates(null);
+    setDates([]);
     setCity('');
     setSortBy('');
     setRating('');

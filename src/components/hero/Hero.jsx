@@ -8,17 +8,15 @@ import RoomAndVisitors from "../roomAndVisitors/roomAndVisitors";
 
 function Hero() {
   const [city, setCity] = useState("");
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const [dates, setDates] = useState([]);  // Single state for dates as an array
   const [guests, setGuests] = useState(null);
   const [rooms, setRooms] = useState(null);
   const [rating, setRating] = useState('');
   const [sortBy, setSortBy] = useState('');
 
   const handleFindResorts = (e) => {
+    console.log(city, dates, guests, rooms);
     setCity(city);
-    setStartDate(startDate);
-    setEndDate(endDate);
     setGuests(guests);
     setRooms(rooms);
   };
@@ -38,7 +36,8 @@ function Hero() {
             <DropdownCity city={city} setCity={setCity} />
           </div>
           <div className="dateSelectorDiv">
-            <EventDateSelector startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate} />
+            {/* Pass dates array directly */}
+            <EventDateSelector dates={dates} setDates={setDates} />
           </div>
           <div className="peopleAndRoomDiv">
             <RoomAndVisitors guests={guests} setGuests={setGuests} rooms={rooms} setRooms={setRooms} />
@@ -48,7 +47,7 @@ function Hero() {
           to={{
             pathname: '/resorts/results',
           }}
-          state={{ city, startDate, endDate, guests, rooms, rating, sortBy}}
+          state={{ city, dates, guests, rooms, rating, sortBy }}
         >
           <button className="buttonSearchResort" onClick={handleFindResorts}>
             Find the best Resorts

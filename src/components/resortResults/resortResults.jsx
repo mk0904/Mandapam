@@ -3,25 +3,21 @@ import CardComponent from "../heroCard/CardComponent";
 import FilterComponent from '../filterComponent/FilterComponent';
 import { resortsData } from '../../Data';
 import { useState, useEffect, useMemo } from 'react';
-import { useParams, useLocation } from 'react-router-dom'; // Import useLocation
+import { useLocation } from 'react-router-dom';
 
 function ResortResults() {
-     
      const location = useLocation();
-     const { city: initialCity, startDate: initialStartDate, endDate: initialEndDate, guests: initialGuests, rooms: initialRooms } = location.state || {}; // Default to undefined if state not passed
+     const { city: initialCity, dates: initialDates, guests: initialGuests, rooms: initialRooms } = location.state || {}; // Use dates array
 
-     // Set initial states from location.state or use defaults
      const [city, setCity] = useState(initialCity || '');
-     const [rating, setRating] = useState('');
-     const [sortBy, setSortBy] = useState('');
-     const [startDate, setStartDate] = useState(initialStartDate || null);
-     const [endDate, setEndDate] = useState(initialEndDate || null);
+     const [dates, setDates] = useState(initialDates || []);  // Handle dates as an array
      const [guests, setGuests] = useState(initialGuests || 1);
      const [rooms, setRooms] = useState(initialRooms || 1);
+     const [rating, setRating] = useState('');
+     const [sortBy, setSortBy] = useState('');
      const [currentPage, setCurrentPage] = useState(1);
      const [cardsPerPage, setCardsPerPage] = useState(12);
 
-     console.log(location.state);
      useEffect(() => {
           const updateCardsPerPage = () => {
                if (window.innerWidth <= 620) {
@@ -38,59 +34,67 @@ function ResortResults() {
      }, []);
 
      const filteredResorts = useMemo(() => {
+          const [startDate, endDate] = dates;  // Extract start and end dates from dates array
           return resortsData
-              .filter(resort => city ? resort.location === city : true)
-              .filter(resort => rating ? resort.rating >= rating : true)
-              .filter(resort => guests ? resort.guests >= guests : true)
-              .filter(resort => rooms ? resort.rooms >= rooms : true)
-              .filter(resort => {
-                  // Filter by dates if a date range is selected
-                  if (startDate && endDate) {
-                      return resort.bookedDates ? resort.bookedDates.every(date => {
-                          const dateToCheck = new Date(date);
-                          return dateToCheck < startDate || dateToCheck > endDate;
-                      }) : true; // If bookedDates is not defined, include the resort
-                  }
-                  return true; // If no date range is selected, include all resorts
-              })
-              .sort((a, b) => {
-                  if (sortBy === 'pricehightolow') return b.price[0] - a.price[0];
-                  if (sortBy === 'pricelowtohigh') return a.price[0] - b.price[0];
-                  if (sortBy === 'ratinghightolow') return b.rating - a.rating;
-                  if (sortBy === 'nameatoz') return a.name.localeCompare(b.name);
-                  if (sortBy === 'nameztoa') return b.name.localeCompare(a.name);
-                  return 0;
-              });
-      }, [city, rating, sortBy, startDate, endDate, guests, rooms]);
-      
+               .filter(resort => city ? resort.location === city : true)
+               .filter(resort => rating ? resort.rating >= rating : true)
+               .filter(resort => guests ? resort.guests >= guests : true)
+               .filter(resort => rooms ? resort.rooms >= rooms : true)
+               .filter(resort => {
+                    if (dates.length === 2) {
+                         return resort.datesoccupied ? resort.datesoccupied.every(date => {
+                              const dateToCheck = new Date(date);
+                              console.log(city, dateToCheck, startDate, endDate);
+                              return dateToCheck < startDate || dateToCheck > endDate;
+                         }) : true;
+                    }
+                    return true;
+               })
+               .sort((a, b) => {
+                    if (sortBy === 'pricehightolow') return b.price[0] - a.price[0];
+                    if (sortBy === 'pricelowtohigh') return a.price[0] - b.price[0];
+                    if (sortBy === 'pricelowtohighnonveg') return a.price[1] - b.price[1];
+                    if (sortBy === 'pricehightolownonveg') return b.price[1] - a.price[1];                    
+                    if (sortBy === 'ratinghightolow') return b.rating - a.rating;
+                    if (sortBy === 'nameatoz') return a.name.localeCompare(b.name);
+                    if (sortBy === 'nameztoa') return b.name.localeCompare(a.name);
+                    if (sortBy === 'guestsmost') return b.guests - a.guests;
+                    if (sortBy === 'guestsmost') return a.guests - b.guests;
+                    if (sortBy === 'mostrooms') return b.rooms - a.rooms;
+                    if (sortBy === 'leastrooms') return a.rooms - b.rooms;
+                    return 0;
+               });
+     }, [city, rating, sortBy, dates, guests, rooms]);
 
-     // Pagination Logic
-     const indexOfLastResort = currentPage * cardsPerPage;
-     const indexOfFirstResort = indexOfLastResort - cardsPerPage;
-     const currentResorts = filteredResorts.slice(indexOfFirstResort, indexOfLastResort);
-     const paginate = (pageNumber) => setCurrentPage(pageNumber);
+     // Calculate the total number of pages
+     const totalPages = Math.ceil(filteredResorts.length / cardsPerPage);
+
+     // Slice the resorts to display on the current page
+     const currentResorts = filteredResorts.slice(
+          (currentPage - 1) * cardsPerPage,
+          currentPage * cardsPerPage
+     );
 
      return (
           <div className="vendorCategoryGrid">
                <div className="filterPart">
                     <FilterComponent
+                         flag="resort"
                          city={city}
                          setCity={setCity}
                          rating={rating}
                          setRating={setRating}
                          sortBy={sortBy}
                          setSortBy={setSortBy}
-                         startDate={startDate}
-                         setStartDate={setStartDate}
-                         endDate={endDate}
-                         setEndDate={setEndDate}
+                         dates={dates}
+                         setDates={setDates}
                     />
                </div>
                <div className='mainDiv'>
                     <div className="cardList">
                          {currentResorts.map((resort, index) => (
                               <CardComponent
-                              key={resort.id}
+                                   key={resort.id}
                                    props={{
                                         resort: true,
                                         img: resort.pics[0],
@@ -107,13 +111,16 @@ function ResortResults() {
                     </div>
 
                     <div className="pagination">
+                         {/* Previous button, disabled if on the first page */}
                          {currentPage > 1 && (
-                              <button onClick={() => paginate(currentPage - 1)}>
+                              <button onClick={() => setCurrentPage(currentPage - 1)}>
                                    Previous
                               </button>
                          )}
-                         {currentPage < Math.ceil(filteredResorts.length / cardsPerPage) && (
-                              <button onClick={() => paginate(currentPage + 1)}>
+
+                         {/* Next button, disabled if on the last page */}
+                         {currentPage < totalPages && (
+                              <button onClick={() => setCurrentPage(currentPage + 1)}>
                                    Next
                               </button>
                          )}
