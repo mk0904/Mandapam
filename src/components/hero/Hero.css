@@ -3,12 +3,13 @@
  }
  
  .heroBgm {
-   height: 90vh;
+   height: 100vh;
    width: 100%;
    opacity: 0.85;
    position: relative;
    background-position: center;
    filter: brightness(0.75);
+   margin-top: -60px;
  }
  
  .heroBgm img {
@@ -113,12 +114,15 @@
  }
  /* Medium screen responsiveness (tablets) */
  @media screen and (max-width: 1180px) and (min-width: 680px) {
+  .heroBgm{
+    height: 110vh;
+  }
+
    .p-calendar, #guests{
       border-right: none;
    }
    .heroInput {
       max-width: 600px;
-      padding: 15px;
       height: auto;
       top: 45%;
       padding-bottom: 0px;
@@ -132,21 +136,23 @@
     .heroInputDiv {
       flex-direction: column;
       width: 100%;
-      padding: 5px 0;
       gap: 10px;
+      height: 175px;
     }
   
     .dropDownDiv,
     .dateSelectorDiv,
     .peopleAndRoomDiv {
       width: 100%;
-      padding: 5px 0;
       border: none;
     }
  }
  
  /* Small screen responsiveness (phones) */
  @media screen and (max-width: 680px) {
+  .heroBgm{
+    height: 110vh;
+  }
    .heroInput {
      max-width: 300px;
      padding: 15px;
@@ -163,16 +169,16 @@
    .heroInputDiv {
      flex-direction: column;
      width: 100%;
-     padding: 5px 0;
      gap: 10px;
+     height: 175px;
    }
  
    .dropDownDiv,
    .dateSelectorDiv,
    .peopleAndRoomDiv {
      width: 100%;
-     padding: 5px 0;
      border: none;
    }
+   
  }
  

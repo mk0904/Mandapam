@@ -77,3 +77,13 @@
 .p-inputtext:hover{
      background-color: hsla(0, 86%, 19%, 0.025);
 }
+
+@media screen and (max-width: 1180px){
+     .p-dropdown-items-wrapper{
+          width: 100%;
+     }
+     .p-inputwrapper span{
+          font-size: 1.1rem;
+     }
+     
+}

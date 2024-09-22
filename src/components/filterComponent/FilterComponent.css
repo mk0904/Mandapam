@@ -155,7 +155,11 @@
     width: 95%;
   }
   .filterToggleButton{
-    right: 0;
+    right: 20px;
+    top: 60px;
+  }
+  .filterToggleButton:hover {
+    background-color: hsla(0, 86%, 23%, 0.842);
   }
 }
 

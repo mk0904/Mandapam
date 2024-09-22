@@ -104,6 +104,9 @@
    }
 
    @media screen and (max-width: 875px){
+    .hero{
+      margin-top: -60px;
+    }
     .Bgm{
       margin-top: -60px;
     }

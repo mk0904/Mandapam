@@ -82,3 +82,11 @@
  #guests{
      border-right: none;
   }}
+
+@media screen and (max-width: 1180px){
+  #guests .p-component{
+    border-bottom-left-radius: 10px;
+  }
+     #guests{
+          border-right: none;
+     }}

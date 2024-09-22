@@ -8,11 +8,25 @@
 }
 .br-header {
   width: 100%;
+  top: 0;
   position: fixed;
   z-index: 1000;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  animation: dropdown 1s ease forwards;
 }
+
+@keyframes dropdown {
+  from {
+    top: -60px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 
 .navbar {
   display: flex;
@@ -38,6 +52,7 @@
 .navbar-center ul li {
   padding: 0px 20px;
   text-decoration: none;
+  font-size: medium;
 }
 
 .navbar-right {
@@ -85,13 +100,6 @@ a {
   text-decoration: none;
 }
 
-.navbar-center ul li:hover,
-.navbar-right ul li:hover {
-  transition: transform 0.3s ease, color 0.3s ease;
-  transform: scale(1.05);
-  color: hsl(0, 87%, 20%);
-}
-
 a:hover {
   transition: color 0.3s ease;
   color: hsl(0, 87%, 25%);
@@ -107,6 +115,9 @@ a:hover {
 .navbar-center ul li:hover,
 .navbar-right ul li:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: scale(1.05);
+  color: hsl(0, 87%, 20%);
 }
 
 .navbar-center select {
@@ -119,6 +130,7 @@ a:hover {
   font-weight: 500;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   outline: none;
+  background-size: 12px;
   appearance: none;
 }
 
@@ -137,21 +149,12 @@ a:hover {
   display: none;
 }
 
-.navbar-center select {
-  background-size: 12px;
-}
-
 @media screen and (max-width: 955px) {
   .navbar-right ul li:first-child {
     display: none;
   }
 }
 
-@media screen and (max-width: 875px) {
-  .navbar-center {
-    display: none;
-  }
-}
 
 @media screen and (max-width: 875px) {
   .navbar-left {
@@ -206,10 +209,6 @@ a:hover {
 
   .menu-toggle:focus {
     outline: none;
-  }
-
-  .br-header {
-    position: relative;
   }
 
   .navbar-left {
