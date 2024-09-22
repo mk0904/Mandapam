@@ -1,7 +1,7 @@
 :root {
      font-family: 'SUSE', sans-serif;
    }
-   .hero{
+   .hero {
     margin-top: -60px;
    }
    .Bgm {
@@ -118,5 +118,10 @@
     .Bgm img{
       height: 110vh;
       margin-top: 60px;
+    }
+    .card{
+      min-width: 300px;
+      max-width: 380px;
+      min-height: 450px;
     }
    }
