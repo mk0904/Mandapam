@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { Button } from '@mui/material';
 import './CardHome.css';
 import { GoArrowRight } from "react-icons/go";
+import { NavLink } from 'react-router-dom';
 
-function CardHome({ Img, Title, Desc, Reverse, buttonText }) {
+function CardHome({ Img, Title, Desc, Reverse, buttonText, paramVar }) {
     const containerRef = useRef(null);
 
     const handleResize = () => {
@@ -35,7 +36,9 @@ function CardHome({ Img, Title, Desc, Reverse, buttonText }) {
                 <div className="Overlay">
                     <h1 className="Text">{Title}</h1>
                     <p className="desc">{Desc}</p>
-                    <Button variant="contained" className="Button">{buttonText}<GoArrowRight style={{ marginLeft: "10px" }} /></Button>
+                    <NavLink to={`${paramVar}`} style={{ textDecoration: 'none' }}>
+                         <Button variant="contained" className="Button">{buttonText}<GoArrowRight style={{ marginLeft: "10px" }} /></Button>
+                    </NavLink>
                 </div>
             </div>
         </div>

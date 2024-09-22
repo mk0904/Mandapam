@@ -36,10 +36,10 @@ const Home = () => {
         </div>
       </div>
 
-      <CardHome Img={resortImg} Title="Resorts" Desc="your destination with your destined one..." buttonText="Book a Resort"/>
-      <CardHome Img={catererImg} Reverse="True" Title="Vendors" Desc="Best vendors...be it.. photographers, caterers, pandits, make-up artists..etc." buttonText="Find the best Vendor"/>
-      <CardHome Img={rivaayaImg} Title="Rivaaya" Desc="The traditionals that's made for you... be it dress or jwellery..." buttonText="Explore Rivaaya"/>
-      <CardHome Img={planyourweddingImg} Reverse="True" Title="Plan your wedding" Desc="The traditionals that's made for you... be it dress or jwellery..." buttonText="Plan it best"/>
+      <CardHome Img={resortImg} Title="Resorts" Desc="your destination with your destined one..." buttonText="Book a Resort" paramVar="resorts"/>
+      <CardHome Img={catererImg} Reverse="True" Title="Vendors" Desc="Best vendors...be it.. photographers, caterers, pandits, make-up artists..etc." buttonText="Find the best Vendor" paramVar="vendors"/>
+      <CardHome Img={rivaayaImg} Title="Rivaaya" Desc="The traditionals that's made for you... be it dress or jwellery..." buttonText="Explore Rivaaya" paramVar="rivaaya"/>
+      <CardHome Img={planyourweddingImg} Reverse="True" Title="Plan your wedding" Desc="The traditionals that's made for you... be it dress or jwellery..." buttonText="Plan it best" paramVar="plan-your-wedding"/>
     </div>
   );
 };
