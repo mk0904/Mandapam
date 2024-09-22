@@ -61,4 +61,13 @@
   .homeImage {
     height: 105vh;
   }
+  .imagedesc {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 875px){
+  .imagedesc {
+    margin-bottom: 130px;
+  }
 }
