@@ -22,7 +22,7 @@
   bottom: 0;
   width: 100%;
   height: 100%; /* Ensure it covers the entire height of the container */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.75) 80%);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -30,12 +30,22 @@
 
 .imageText {
   color: white;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 100;
-  bottom: ;
+  margin-bottom: 20px;
   text-align: center;
   letter-spacing: 0.2rem;
   animation: fadeIn 3s;
+}
+
+.imagedesc {
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 100px;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  animation: fadeIn 5s;
 }
 
 @keyframes fadeIn {

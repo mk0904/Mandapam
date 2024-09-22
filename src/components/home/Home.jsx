@@ -7,8 +7,13 @@ const Home = () => {
     <div className="homeContainer">
       <img src={HomeImg} alt="Mandapam" className="homeImage" />
       <div className="imageOverlay">
-        <h1 className="imageText">mandapam</h1>
+          <div>
+               <h1 className="imageText">mandapam</h1>
+               <p className="imagedesc">your destination with your destined one...</p>
+          </div>
+        
       </div>
+      
     </div>
   );
 };
