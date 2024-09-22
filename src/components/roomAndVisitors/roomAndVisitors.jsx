@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import { InputNumber } from "primereact/inputnumber";
 import { FloatLabel } from 'primereact/floatlabel';
 
-function RoomAndVisitors() {
-  const [guests, setGuests] = useState(null);
-  const [rooms, setRooms] = useState(null);
+function RoomAndVisitors({ guests, setGuests, rooms, setRooms }) {
+
 
   const [value, setValue] = useState(20);
 

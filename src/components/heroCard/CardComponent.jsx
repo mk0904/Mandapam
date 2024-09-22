@@ -21,8 +21,22 @@ function CardComponent({props}) {
           <FaMapMarkerAlt className='locationIcon' />
           <span>{props.location}</span>
         </div>
-        <h3 className='ComponentCardPrice'>₹ {Intl.NumberFormat('en-IN').format(props.price)} <span className='spanPerDay'>per day</span></h3>
-        <p className='ComponentCardDesc'>{props.desc}</p>
+        {props.vegprice && props.nonvegprice ? (
+          <div className='pricesDish'>
+            <h3 className='veg'>₹ {props.vegprice} <span className='spanPerDay'>per plate</span></h3>
+            <h3 className='nonveg'>₹ {props.nonvegprice} <span className='spanPerDay'>per plate</span></h3>
+          </div>
+        ):(
+          <h3 className='ComponentCardPrice'>₹ {Intl.NumberFormat('en-IN').format(props.price)} <span className='spanPerDay'>per day</span></h3>
+        )}
+        {props.guests && props.rooms ? (
+          <div className='guestsandrooms'>
+            <h3 className='rooms'>{props.rooms}<span className='spanPerDay'> Rooms</span></h3>
+            <h3 className='guests'>{props.guests}<span className='spanPerDay'> Guests</span></h3>
+          </div>
+        ):(
+          <p className='ComponentCardDesc'>{props.desc}</p>
+        )}
       </div>
     </div>
   );

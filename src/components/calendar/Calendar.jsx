@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import './Calendar.css';
 import { Calendar } from 'primereact/calendar';
 
-function EventDateSelector() {
+function EventDateSelector({startDate, setStartDate, endDate, setEndDate}) {
     let today = new Date();
     let date = today.getDate();
     let month = today.getMonth();
     let year = today.getFullYear();
-
-    const [eventStartDate, setEventStartDate] = useState(null);
-    const [eventEndDate, setEventEndDate] = useState(null);
 
     // First possible date starts from today
     let startMinDate = new Date();
@@ -22,10 +19,10 @@ function EventDateSelector() {
     startMaxDate.setFullYear(startMaxDate.getFullYear() + 1);
 
     // If the user selects an end date first, then max start date is the event end date
-    let customStartMaxDate = eventEndDate ? new Date(eventEndDate) : startMaxDate;
+    let customStartMaxDate = endDate ? new Date(endDate) : startMaxDate;
 
     // If the user selects a start date first, the min end date is the event start date
-    let endMinDate = eventStartDate ? new Date(eventStartDate) : startMinDate;
+    let endMinDate = startDate ? new Date(startDate) : startMinDate;
 
     // Max end date allowed (1 year from the start date)
     let endMaxDate = new Date(startMinDate);
@@ -34,10 +31,10 @@ function EventDateSelector() {
     return (
         <div className="calendar">
                 <Calendar 
-                    value={eventStartDate} 
+                    value={startDate} 
                     placeholder="Event Start Date" 
                     onChange={(e) => {
-                        setEventStartDate(e.value);
+                        setStartDate(e.value);
                     }} 
                     dateFormat="dd M yy"
                     minDate={startMinDate} 
@@ -46,9 +43,9 @@ function EventDateSelector() {
                     showIcon 
                 />
             <Calendar 
-                value={eventEndDate} 
+                value={endDate} 
                 placeholder="Event End Date" 
-                onChange={(e) => setEventEndDate(e.value)} 
+                onChange={(e) => setEndDate(e.value)} 
                 dateFormat="dd M yy"
                 minDate={endMinDate}  // End date cannot be earlier than the start date
                 maxDate={endMaxDate}   // Max end date is 1 year from today

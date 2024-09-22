@@ -5,7 +5,7 @@ import { Calendar } from 'primereact/calendar';
 import { FaFilter } from 'react-icons/fa';
 import { RiCloseLargeLine } from "react-icons/ri";
 
-const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, rating, setRating }) => {
+const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, rating, setRating, guests, setGuests, rooms, setRooms }) => {
   const [isFilterVisible, setIsFilterVisible] = useState(true);
 
   const cities = ['Goa', 'Jim Corbett', 'Udaipur', 'Jaipur', 'Pune', 'Mumbai', 'Delhi', 'Bangalore', 'Lucknow', 'Hyderabad'];

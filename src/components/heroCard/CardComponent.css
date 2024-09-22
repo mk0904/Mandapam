@@ -1,4 +1,5 @@
 .ComponentCard {
+  margin-top: -30px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -7,7 +8,7 @@
   overflow: hidden;
   max-width: 100%;
   min-height: 428px;
-  max-height: 428px;
+  max-height: 528px;
   padding: 8px;
   box-sizing: border-box;
   margin: 10px;
@@ -40,7 +41,7 @@
   margin-bottom: 4px;
   width: 100%;
 }
-.ComponentCardHeader h1{
+.ComponentCardHeader h1 {
   text-align: start;
 }
 
@@ -56,18 +57,19 @@
   background-color: hsla(0, 86%, 19%, 0.078);
   padding: 2px 5px;
 }
-.ratingDiv h4{
+.ratingDiv h4 {
   font-size: 1rem;
   margin: 0;
   margin-left: 6px;
 }
 
-.ComponentCardInfo{
+.ComponentCardInfo {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 0px;
+  margin-bottom: 10px;
   height: fit-content;
 }
 .ComponentCardInfo h1 {
@@ -112,6 +114,34 @@
   text-align: start;
 }
 
+.pricesDish {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+.guestsandrooms {
+  display: flex;
+  width: 100%;
+  justify-content:flex-start;
+  align-items: center;
+  margin: -10px 0;
+  color: cadetblue;
+}
+
+.guestsandrooms span {
+  color: cadetblue;
+  margin-right: 15px;
+}
+.veg {
+  color: darkolivegreen;
+}
+
+.nonveg {
+  color: darkred;
+}
+
 @media screen and (max-width: 900px) and (min-width: 480px) {
   .ComponentCard {
     display: flex;
@@ -123,7 +153,7 @@
     max-height: 230px;
   }
 
-  .ComponentCardInfo{
+  .ComponentCardInfo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -132,7 +162,7 @@
     height: fit-content;
   }
 
-  .ComponentCardImage img{
+  .ComponentCardImage img {
     margin: 5px;
   }
 
@@ -149,23 +179,23 @@
   .ComponentCardDesc {
     font-size: 0.9rem;
   }
-  
 }
 
 @media (max-width: 480px) {
   .ComponentCard {
     max-width: 300px;
     padding: 8px;
-    margin: 10px;
+    margin-top: 20px;
     min-height: 378px;
-    max-height: 378px;
+    max-height: 408px;
   }
 
   .ComponentCardImage img {
     height: 180px;
   }
 
-  .cardList{
+  .cardList {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,5 +216,11 @@
 
   .ComponentCardDesc {
     font-size: 0.8rem;
+  }
+
+  .veg,
+  .nonveg {
+    display: flex;
+    flex-direction: column;
   }
 }
