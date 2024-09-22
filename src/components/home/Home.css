@@ -52,17 +52,19 @@
   }
 }
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 1105px) {
   .homeContainer{
     padding: 0px;
-    margin-top: -60px;
     height: 105vh;
   }
   .homeImage {
     height: 105vh;
   }
+  .imageText {
+    margin-bottom: 0px;
+  }
   .imagedesc {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 }
 
