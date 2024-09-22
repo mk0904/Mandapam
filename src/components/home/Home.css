@@ -13,7 +13,7 @@
 
 .homeImage {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover; /* Ensures the image covers the whole container while maintaining aspect ratio */
 }
 
@@ -42,7 +42,7 @@
   color: white;
   font-size: 2rem;
   font-weight: 100;
-  margin-bottom: 100px;
+  margin-bottom: 130px;
   text-align: center;
   letter-spacing: 0.2rem;
   animation: fadeIn 5s;
