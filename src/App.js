@@ -5,7 +5,6 @@ import Menubar from './components/menubar/menubar';
 import Hero from './components/hero/Hero';
 import PlanYourWedding from './components/planYourWedding/PlanYourWedding';
 import VendorsPage from './components/vendorsPage/VendorsPage';
-import FilterComponent from './components/filterComponent/FilterComponent';
 import VendorCategoryPage from './components/vendorCategoryPage/VendorCategoryPage';
 import Home from './components/home/Home';
   

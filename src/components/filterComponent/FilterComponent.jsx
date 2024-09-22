@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './FilterComponent.css';
 import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
-import { Rating } from '@mui/material';
 import { FaFilter } from 'react-icons/fa';
 import { RiCloseLargeLine } from "react-icons/ri";
 
@@ -76,7 +75,7 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
 
       {isFilterVisible && (
         <div className="filterComponent">
-          <h2></h2>
+          <h2> </h2>
           <form onSubmit={handleSubmit} className="filterForm">
             <div className="filterDropdown">
               <Dropdown

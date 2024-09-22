@@ -88,6 +88,23 @@
    width: 75%;
    border-right: 0.7px solid hsla(0, 87%, 25%, 0.405);
  }
+
+ .buttonSearchResort{
+    background-color: hsl(0, 87%, 15%);
+    color: white;
+    width: fit-content;
+    align-self: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    bottom: -20px;
+    transition: 0.3s;
+ }
  
  @media screen and (max-width:875px) {
    .heroBgm{
@@ -103,7 +120,8 @@
       max-width: 600px;
       padding: 15px;
       height: auto;
-      top: 45%; /* Adjust for smaller screen */
+      top: 45%;
+      padding-bottom: 0px;
     }
   
     .heroTitle {
@@ -133,7 +151,8 @@
      max-width: 300px;
      padding: 15px;
      height: auto;
-     top: 45%; /* Adjust for smaller screen */
+     top: 45%;
+     padding-bottom: 0px;
    }
  
    .heroTitle {

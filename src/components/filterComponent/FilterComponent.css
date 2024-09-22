@@ -151,8 +151,11 @@
   }
   .filterPage {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 95%;
+  }
+  .filterToggleButton{
+    right: 0;
   }
 }
 

@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import HomeImg from '../../images/home1.png';
 import MobileImg from '../../images/home3.png';
-import ResortImg from '../../images/resort.webp'; // Import resort image
+import resortImg from '../../images/resort1.webp';
+import catererImg from '../../images/catering.webp';
+import rivaayaImg from '../../images/rivaaya.png';
+import CardHome from '../cardHome/CardHome';
+import planyourweddingImg from '../../images/planYourWedding.png';
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 665);
@@ -32,15 +36,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* New Resort Section */}
-      <div className="resortSection">
-        <img src={ResortImg} alt="Resort" className="resortImage" />
-        <div className="resortText">
-          <h2 className="resortTitle">Book your Dream Resort</h2>
-          <p className="resortDesc">Marry your king or queen in your favourite palace...Destiny is destined together.</p>
-          <p className="resortDesc">Shaadi karo kurbat se...</p>
-        </div>
-      </div>
+      <CardHome Img={resortImg} Title="Resorts" Desc="your destination with your destined one..." buttonText="Book a Resort"/>
+      <CardHome Img={catererImg} Reverse="True" Title="Vendors" Desc="Best vendors...be it.. photographers, caterers, pandits, make-up artists..etc." buttonText="Find the best Vendor"/>
+      <CardHome Img={rivaayaImg} Title="Rivaaya" Desc="The traditionals that's made for you... be it dress or jwellery..." buttonText="Explore Rivaaya"/>
+      <CardHome Img={planyourweddingImg} Reverse="True" Title="Plan your wedding" Desc="The traditionals that's made for you... be it dress or jwellery..." buttonText="Plan it best"/>
     </div>
   );
 };

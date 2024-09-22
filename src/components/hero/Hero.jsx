@@ -28,6 +28,7 @@ function Hero() {
               <RoomAndVisitors />
             </div>
           </div>
+          <button className="buttonSearchResort">Find the best Resorts</button>
         </div>
     </div>
   );
