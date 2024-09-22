@@ -1,17 +1,20 @@
 :root {
      font-family: 'SUSE', sans-serif;
    }
+   .hero{
+    margin-top: -60px;
+   }
    .Bgm {
      position: fixed;
      width: 100%;
-     height: 100%;
+     height: 110vh;
      overflow: hidden;
      filter: brightness(0.45);
    }
    
    .Bgm img {
      width: 100%;
-     height: 100vh;
+     height: 110vh;
      object-fit: cover;
      z-index: -1;
      filter: blur(2px);
