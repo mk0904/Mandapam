@@ -1,94 +1,159 @@
-/* .hero{
+.hero {
    padding-top: 60px;
-} */
-.heroBgm {
-     height: 100%;
-     width: 100%;
-     opacity: 0.85;
-     position: relative;
-     background-position: center;
-     filter: brightness(0.75);
  }
-
+ 
+ .heroBgm {
+   height: 90vh;
+   width: 100%;
+   opacity: 0.85;
+   position: relative;
+   background-position: center;
+   filter: brightness(0.75);
+ }
+ 
  .heroBgm img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     z-index: -10000;
-     filter: blur(1.35px);
- }
- 
-.heroInput{
-     font-size: 1.2rem;
-     position: absolute;
-     background: white;
-     height: 200px;
-     min-width: 1000px;
-     border-radius: 10px;
-     top: 35%;
-     left: 50%;
-     /* opacity: 0.9; */
-     transform: translate(-50%, -50%);
-     font-weight: 700;
-     color: hsl(0, 87%, 25%);
-     z-index: 10; 
-     font-family: 'SUSE', sans-serif;
-     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-     display: flex;
-     flex-direction: column;
- }
- 
-
- .heroTitle{
-        font-size: 1.5rem;
-        font-weight: 200;
-        color: hsl(0, 87%, 25%);
-        margin-top: 20px;
-        margin-bottom: 40px;
-        font-family: 'SUSE', sans-serif;
- }
-
- .heroText{
-        font-size: 1.2rem;
-        font-weight: 400;
-        color: hsl(0, 87%, 25%);
-        margin: 10px;
-        font-family: 'SUSE', sans-serif;
- }
-
- .heroInputDiv{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    display: flex;
-    width: 92%;
-    align-self: center;
-    align-items: center;
-    flex-direction: row;
-    border: 0.7px solid hsla(0, 87%, 25%, 0.405);
-    border-radius: 7px;
- }
-
-
- .peopleAndRoomDiv{
-   width: 80%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 7px;
-}
- .dateSelectorDiv{
    width: 100%;
    height: 100%;
+   object-fit: cover;
+   z-index: -10000;
+   filter: blur(1.35px);
+ }
+ 
+ .heroInput {
+   font-size: 1.2rem;
+   position: absolute;
+   background: white;
+   height: 200px;
+   width: 100%;
+   max-width: 1000px;
+   border-radius: 10px;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-weight: 700;
+   color: hsl(0, 87%, 25%);
+   z-index: 10;
+   font-family: 'SUSE', sans-serif;
+   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+ }
+ 
+ .heroTitle {
+   font-size: 1.5rem;
+   font-weight: 200;
+   color: hsl(0, 87%, 25%);
+   margin-top: 20px;
+   margin-bottom: 40px;
+   font-family: 'SUSE', sans-serif;
+ }
+ 
+ .heroText {
+   font-size: 1.2rem;
+   font-weight: 400;
+   color: hsl(0, 87%, 25%);
+   margin: 10px;
+   font-family: 'SUSE', sans-serif;
+ }
+ 
+ .heroInputDiv {
+   display: flex;
+   width: 92%;
+   align-self: center;
+   align-items: center;
+   flex-direction: row;
+   border: 0.7px solid hsla(0, 87%, 25%, 0.405);
+   border-radius: 7px;
+ }
+ 
+ .peopleAndRoomDiv,
+ .dateSelectorDiv,
+ .dropDownDiv {
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
-   border-radius: 7px;
-}
-
-.dropDownDiv{
-   height: 100%;
+ }
+ 
+ .peopleAndRoomDiv {
+   width: 80%;
+ }
+ 
+ .dateSelectorDiv {
+   width: 100%;
+ }
+ 
+ .dropDownDiv {
    width: 75%;
-   border-right:  0.7px solid hsla(0, 87%, 25%, 0.405);;
-}
+   border-right: 0.7px solid hsla(0, 87%, 25%, 0.405);
+ }
+ 
+ @media screen and (max-width:875px) {
+   .heroBgm{
+      margin-top: -60px;
+   }   
+ }
+ /* Medium screen responsiveness (tablets) */
+ @media screen and (max-width: 1180px) and (min-width: 680px) {
+   .p-calendar, #guests{
+      border-right: none;
+   }
+   .heroInput {
+      max-width: 600px;
+      padding: 15px;
+      height: auto;
+      top: 45%; /* Adjust for smaller screen */
+    }
+  
+    .heroTitle {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+  
+    .heroInputDiv {
+      flex-direction: column;
+      width: 100%;
+      padding: 5px 0;
+      gap: 10px;
+    }
+  
+    .dropDownDiv,
+    .dateSelectorDiv,
+    .peopleAndRoomDiv {
+      width: 100%;
+      padding: 5px 0;
+      border: none;
+    }
+ }
+ 
+ /* Small screen responsiveness (phones) */
+ @media screen and (max-width: 680px) {
+   .heroInput {
+     max-width: 300px;
+     padding: 15px;
+     height: auto;
+     top: 45%; /* Adjust for smaller screen */
+   }
+ 
+   .heroTitle {
+     font-size: 1.3rem;
+     margin-bottom: 20px;
+   }
+ 
+   .heroInputDiv {
+     flex-direction: column;
+     width: 100%;
+     padding: 5px 0;
+     gap: 10px;
+   }
+ 
+   .dropDownDiv,
+   .dateSelectorDiv,
+   .peopleAndRoomDiv {
+     width: 100%;
+     padding: 5px 0;
+     border: none;
+   }
+ }
+ 

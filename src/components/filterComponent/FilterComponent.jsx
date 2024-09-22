@@ -53,6 +53,7 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
     setDates(null);
     setCity('');
     setSortBy('');
+    setRating('');
   };
 
   const toggleFilterVisibility = () => {
@@ -119,7 +120,7 @@ const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, ra
             </div>
 
             <div className="filterButtons">
-              <button type="submit" className="filterButton">Apply Filters</button>
+            {window.innerWidth <= 620 && <button type="submit" className="filterButton">close</button>}
               <button type="button" className="clearButton" onClick={handleClearFilters}>Clear All</button>
             </div>
           </form>

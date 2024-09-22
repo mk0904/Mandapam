@@ -92,7 +92,8 @@
 
 .filterButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .filterButtons button {
@@ -122,6 +123,14 @@
 @media screen and (max-width: 900px) and (min-width: 620px) {
   .filterComponent {
     margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .filterButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

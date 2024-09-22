@@ -165,14 +165,6 @@ a:hover {
     position: relative;
     left: 0;
     background-color: hsl(0, 0%, 100%);
-    display: flex;
-    width: 100%;
-    height: 50px;
-    flex-direction: row;
-    position: absolute;
-    top: 60px;
-    justify-content: space-between;
-    left: 0;
   }
 
   .navbar-center.open {
@@ -184,6 +176,8 @@ a:hover {
     top: 60px;
     justify-content: space-between;
     left: 0;
+    animation: fadeIn 0.5s ease;
+    z-index: 1000;
   }
 
   .navbar-center ul {
@@ -198,7 +192,7 @@ a:hover {
     font-size: medium;
   }
 
-  /* .menu-toggle {
+  .menu-toggle {
     display: block;
     background: none;
     border: none;
@@ -208,11 +202,11 @@ a:hover {
     position: absolute;
     top: 0px;
     left: 20px;
-  } */
+  }
 
-  /* .menu-toggle:focus {
+  .menu-toggle:focus {
     outline: none;
-  } */
+  }
 
   .br-header {
     position: relative;
@@ -220,5 +214,16 @@ a:hover {
 
   .navbar-left {
     flex-grow: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    top: 40px;
+  }
+  to {
+    opacity: 1;
+    top: 60px;
   }
 }
