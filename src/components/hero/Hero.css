@@ -1,9 +1,9 @@
-.hero {
+.heroplan {
    padding-top: 60px;
  }
  
  .heroBgm {
-   height: 110vh;
+   height: 100vh;
    width: 100%;
    opacity: 0.85;
    position: relative;
@@ -28,7 +28,7 @@
    width: 100%;
    max-width: 1000px;
    border-radius: 10px;
-   top: 35%;
+   top: 45%;
    left: 50%;
    transform: translate(-50%, -50%);
    font-weight: 700;
@@ -110,13 +110,23 @@
  @media screen and (max-width:875px) {
    .heroBgm{
       margin-top: -60px;
+      height: 100vh;
    }   
+   .heroBgm img{
+    margin: 0px;
+      height: 100%;
+   }
  }
  /* Medium screen responsiveness (tablets) */
  @media screen and (max-width: 1180px) and (min-width: 680px) {
   .heroBgm{
-    height: 110vh;
+    height: 100vh;
+    margin-top: -60px;
   }
+  .heroBgm img{
+    margin: 0px;
+      height: 100%;
+   }
 
    .p-calendar, #guests{
       border-right: none;
@@ -151,7 +161,7 @@
  /* Small screen responsiveness (phones) */
  @media screen and (max-width: 680px) {
   .heroBgm{
-    height: 110vh;
+    height: 100vh;
   }
    .heroInput {
      max-width: 300px;

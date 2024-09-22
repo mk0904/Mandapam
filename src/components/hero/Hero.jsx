@@ -7,7 +7,7 @@ import RoomAndVisitors from "../roomAndVisitors/roomAndVisitors";
 function Hero() {
 
   return (
-    <div className="hero">
+    <div className="heroplan">
         <div className="heroBgm">
           <img src={heroBgm} alt="hero" />
         </div>
