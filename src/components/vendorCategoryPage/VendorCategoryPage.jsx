@@ -10,16 +10,17 @@ function VendorCategoryPage() {
      const [city, setCity] = useState('');
      const [rating, setRating] = useState('');
      const [sortBy, setSortBy] = useState('');
+     const [dates, setDates] = useState(null);
      const [currentPage, setCurrentPage] = useState(1);
-     const [cardsPerPage, setCardsPerPage] = useState(12); // Default for desktop
+     const [cardsPerPage, setCardsPerPage] = useState(12); 
 
-     // Dynamically set the number of cards per page based on screen size
+     console.log(city,sortBy,rating,dates);
      useEffect(() => {
           const updateCardsPerPage = () => {
                if (window.innerWidth <= 620) {
-                    setCardsPerPage(9); // Phones/Tablets
+                    setCardsPerPage(9);
                } else {
-                    setCardsPerPage(12); // Desktop
+                    setCardsPerPage(12);
                }
           };
 
@@ -48,13 +49,12 @@ function VendorCategoryPage() {
      const indexOfLastVendor = currentPage * cardsPerPage;
      const indexOfFirstVendor = indexOfLastVendor - cardsPerPage;
      const currentVendors = filteredVendors.slice(indexOfFirstVendor, indexOfLastVendor);
-
      const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
      return (
           <div className="vendorCategoryGrid">
                <div className="filterPart">
-                    <FilterComponent setCity={setCity} setRating={setRating} setSortBy={setSortBy} />
+                    <FilterComponent city={city} setCity={setCity} rating={rating} setRating={setRating} sortBy={sortBy} setSortBy={setSortBy} dates={dates} setDates = {setDates}/>
                </div>
                <div className='mainDiv'>
                     <div className="cardList">

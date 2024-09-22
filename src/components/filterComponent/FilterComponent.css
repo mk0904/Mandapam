@@ -1,16 +1,16 @@
 .filterPage {
   margin-left: 20px;
+  margin-top: 0px;
   margin-right: 20px;
   width: 200px;
   position: relative;
   left: 0px;
-
 }
 
 .filterComponent {
   position: fixed;
   padding: 10px;
-  background-color: #f9f9f9;
+  margin-top: 80px;
   border-radius: 5px;
   height: 75%;
   max-width: 200px;
@@ -19,7 +19,7 @@
 .filterToggleButton {
   display: block;
   width: 100%;
-  background-color: #007bff;
+  background-color: hsl(0, 87%, 15%);
   color: white;
   padding: 10px;
   border: none;
@@ -29,7 +29,7 @@
 }
 
 .filterToggleButton:hover {
-  background-color: #0056b3;
+  background-color: hsl(0, 86%, 19%);
 }
 
 .filterForm {
@@ -38,21 +38,104 @@
 }
 
 .filterDropdown,
+.ratingSort,
 .filterDropdownSort,
 .calendarWrapper {
   margin-bottom: 15px;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.filterDropdown .p-dropdown,
+.ratingSort .p-dropdown,
+.filterDropdownSort .p-dropdown,
+.calendarWrapper .p-inputtext {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: hsla(0, 87%, 15%, 0.028);
+  border: none;
+  color: hsl(0, 87%, 15%);
+  padding: 10px;
+}
+
+.filterDropdown .p-component .p-dropdown-items-wrapper .p-dropdown-panel li{
+  background-color: black;
+}
+
+.filterDropdown .p-placeholder,
+.ratingSort .p-placeholder,
+.filterDropdownSort .p-placeholder,
+.calendarWrapper .p-inputtext {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.filterDropdown span,
+.ratingSort span,
+.calendarWrapper span,
+.filterDropdownSort span {
+  font-size: 1rem;
+}
+
+.filterDropdown span:hover,
+.ratingSort span:hover,
+.calendarWrapper span:hover,
+.filterDropdownSort span:hover {
+  background-color: transparent;
+}
+
+.calendarWrapper .p-calendar {
+  border: none;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterButtons button {
+  font-weight: 400;
+  background-color: hsla(0, 87%, 15%, 0.843);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: hsl(0, 0%, 100%);
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filterButtons button:hover {
+  background-color: hsl(0, 87%, 15%);
+}
+
+.p-dropdown-panel li {
+  padding: 10px;
+  border-bottom: 1px solid hsla(0, 87%, 15%, 0.229);
+  color: hsl(0, 87%, 15%);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) and (min-width: 620px) {
+  .filterComponent {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 368px) {
-  .filterPage{
+  .filterPage {
     display: flex;
     justify-content: center;
+    margin-top: 0px;
     height: 80%;
     width: 300px;
   }
   .filterComponent {
     padding: 1px;
-    height: 80%;
+    height: 100%;
     width: 62%;
   }
 

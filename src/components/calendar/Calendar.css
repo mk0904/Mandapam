@@ -61,12 +61,12 @@ tbody span{
 
 tbody span:hover{
      background-color: hsla(0, 86%, 19%, 0.078);
-     border-radius: 5px;
+     border-radius: 4px;
 }
 
 .c1 .p-datepicker-today{
      background-color: hsla(0, 86%, 19%, 0.246);
-     border-radius: 6px;
+     border-radius: 4px;
 }
 
 .p-datepicker-header{
@@ -95,7 +95,7 @@ tbody span:hover{
 
 .p-datepicker-selected{
      background-color: hsla(0, 86%, 19%, 0.246);
-     border-radius: 6px;
+     border-radius: 4px;
 }
 
 .calendar .p-inputtext.has-value {
@@ -104,6 +104,6 @@ tbody span:hover{
 
 .p-highlight{
      background-color: hsla(0, 86%, 19%, 0.246);
-     border-radius: 6px;
+     border-radius: 4px;
      font-weight: 900;
 }

@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './FilterComponent.css';
 import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
+import { Rating } from '@mui/material';
 
-const FilterComponent = ({ setCity, setSortBy }) => {
-  const [isFilterVisible, setIsFilterVisible] = useState(true); // Always visible on desktop
-  const [selectedCity, setSelectedCity] = useState('');
-  const [sortBy, setLocalSortBy] = useState('');
-  const [dates, setDates] = useState(null);
+const FilterComponent = ({ city, setCity, sortBy, setSortBy, dates, setDates, rating, setRating }) => {
+  const [isFilterVisible, setIsFilterVisible] = useState(true);
 
   const cities = ['Goa', 'Jim Corbett', 'Udaipur', 'Jaipur', 'Pune', 'Mumbai', 'Delhi', 'Bangalore', 'Lucknow', 'Hyderabad'];
   const sortOptions = [
@@ -17,6 +15,16 @@ const FilterComponent = ({ setCity, setSortBy }) => {
     { label: 'Alphabetical - A to Z', value: 'nameatoz' },
     { label: 'Alphabetical - Z to A', value: 'nameztoa' },
   ];
+  const ratingOptions = [
+     { label: '4.5 or more', value: '4.5' },
+     { label: '3 or more', value: '3' },
+     { label: '2 or more', value: '2' },
+     { label: '1 or more', value: '1' },
+   ];
+
+  const today = new Date();
+  const nextYear = new Date(today);
+  nextYear.setFullYear(today.getFullYear() + 1);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,14 +42,14 @@ const FilterComponent = ({ setCity, setSortBy }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCity(selectedCity);
+    setCity(city);
     setSortBy(sortBy);
     if (window.innerWidth <= 620) setIsFilterVisible(false);
   };
 
   const handleClearFilters = () => {
-    setSelectedCity('');
-    setLocalSortBy('');
+    setCity('');
+    setSortBy('');
     setDates(null);
     setCity('');
     setSortBy('');
@@ -54,8 +62,8 @@ const FilterComponent = ({ setCity, setSortBy }) => {
   return (
     <div className='filterPage'>
       {window.innerWidth <= 620 && (
-        <button 
-          className="filterToggleButton" 
+        <button
+          className="filterToggleButton"
           onClick={toggleFilterVisibility}
           style={{ display: 'block', marginBottom: '10px' }}
         >
@@ -63,38 +71,49 @@ const FilterComponent = ({ setCity, setSortBy }) => {
         </button>
       )}
 
-
       {isFilterVisible && (
         <div className="filterComponent">
-          <h2>Filter Options</h2>
+          <h2></h2>
           <form onSubmit={handleSubmit} className="filterForm">
             <div className="filterDropdown">
-              <Dropdown 
-                value={selectedCity} 
-                onChange={(e) => setSelectedCity(e.value)} 
-                options={cities} 
-                placeholder="Select a City" 
-                className="w-full md:w-14rem" 
+              <Dropdown
+                value={city}
+                onChange={(e) => setCity(e.value)}
+                options={cities}
+                placeholder="Select a City"
+                className="w-full md:w-14rem"
               />
             </div>
 
             <div className="filterDropdownSort">
-              <Dropdown 
-                value={sortBy} 
-                onChange={(e) => setLocalSortBy(e.value)} 
-                options={sortOptions} 
-                placeholder="Sort by" 
-                className="w-full md:w-14rem" 
+              <Dropdown
+                value={sortBy}
+                onChange={(e) => setSortBy(e.value)}
+                options={sortOptions}
+                placeholder="Sort by"
+                className="w-full md:w-14rem"
+              />
+            </div>
+
+            <div className="ratingSort">
+              <Dropdown
+                value={rating}
+                onChange={(e) => setRating(e.value)}
+                options={ratingOptions}
+                placeholder="Rating"
+                className="w-full md:w-14rem"
               />
             </div>
 
             <div className="calendarWrapper">
-              <Calendar 
-                value={dates} 
-                onChange={(e) => setDates(e.value)} 
-                selectionMode="range" 
-                readOnlyInput 
-                hideOnRangeSelection 
+              <Calendar
+                value={dates}
+                onChange={(e) => setDates(e.value)}
+                selectionMode="range"
+                readOnlyInput
+                minDate={today}
+                maxDate={nextYear}
+                hideOnRangeSelection
                 placeholder="Select Date Range"
               />
             </div>
