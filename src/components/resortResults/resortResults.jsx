@@ -1,3 +1,4 @@
+
 import './resortResults.css';
 import CardComponent from "../heroCard/CardComponent";
 import FilterComponent from '../filterComponent/FilterComponent';

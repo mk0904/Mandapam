@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { Galleria } from 'primereact/galleria';
 import { vendorData, resortsData } from '../../Data'; // Importing both vendorData and resortsData
+import { toast, ToastContainer } from 'react-toastify'; // Import toast and ToastContainer
+import 'react-toastify/dist/ReactToastify.css'; // Import default styles for toasts
 import './DetailedCard.css';
 
 const DetailedCard = () => {
@@ -46,7 +48,24 @@ const DetailedCard = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+
+        // Validate phone number (simple regex for demonstration)
+        const phoneRegex = /^[0-9]{10}$/; // Example regex for 10-digit phone number
+        if (!phoneRegex.test(formData.phone)) {
+            toast.error('Please enter a valid phone number (10 digits).');
+            return; // Exit if phone number is invalid
+        }
+
+        // Validate email
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Simple email regex
+        if (!emailRegex.test(formData.email)) {
+            toast.error('Please enter a valid email address.');
+            return; // Exit if email is invalid
+        }
+
+        // Show success toast if all validations pass
+        toast.success(`Mandapam will reach out to you shortly!!, ${formData.name}!`);
+        console.log(formData); // Log form data or send it to your backend
     };
 
     const itemTemplate = (item) => {
@@ -79,14 +98,15 @@ const DetailedCard = () => {
             );
         }
         else {
-               return (
-                    <p><strong>Price:</strong> ₹ {Intl.NumberFormat('en-IN').format(data.price[0])} /per day</p>
-               );
-          }
+            return (
+                <p><strong>Price:</strong> ₹ {Intl.NumberFormat('en-IN').format(data.price[0])} /per day</p>
+            );
+        }
     };
 
     return (
         <div className="cardDetailedContainer">
+            <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar={false} />
             <div className="imageSlider">
                 <Galleria
                     value={data.pics}

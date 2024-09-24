@@ -55,7 +55,7 @@ function VendorCategoryPage() {
                 if (sortBy === 'nameztoa') return b.name.localeCompare(a.name);
                 return 0;
             });
-    }, [city, rating, sortBy, dates]);  // Make sure dates are included in the dependency array
+    },[city, rating, sortBy, dates, category]);  // Make sure dates are included in the dependency array
 
     // Pagination Logic
     const indexOfLastVendor = currentPage * cardsPerPage;
@@ -85,7 +85,6 @@ function VendorCategoryPage() {
                                 vendors: true,
                                 category: category,
                                 id: vendor.id,
-                                category: category,
                                 img: vendor.pics,
                                 name: vendor.name,
                                 rating: vendor.rating,

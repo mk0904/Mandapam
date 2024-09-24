@@ -8,3 +8,20 @@
   display: flex;
   justify-content: center;
 }
+
+.toast-custom {
+  background-color:  white; /* Your theme color */
+  color: hsl(0, 87%, 25%);/* Optional: Change text color for better contrast */
+}
+
+.Toastify__toast-icon ,.Toastify--animate-icon ,.Toastify__zoom-enter svg{
+  fill: hsl(0, 87%, 25%); /* Optional: Change icon color */
+}
+
+.Toastify__progress-bar, .Toastify__progress-bar--animated, .Toastify__progress-bar--controlled {
+  background: hsl(0, 0%, 100%) !important; /* Your theme color for progress bar */
+}
+
+.Toastify__progress-bar--success {
+  background: hsl(0, 87%, 25%) !important; /* Your theme color for success */
+}

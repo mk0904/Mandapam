@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Menubar from "./components/menubar/menubar";
 import Hero from "./components/hero/Hero";
 import PlanYourWedding from "./components/planYourWedding/PlanYourWedding";
@@ -25,6 +27,12 @@ function App() {
           <Route path="/resorts/:id" element={<DetailedCard />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer 
+                position="bottom-right" 
+                autoClose={3000} 
+                hideProgressBar={false} 
+                toastClassName="toast-custom" // Apply your custom class here
+            />
     </div>
   );
 }
