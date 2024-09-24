@@ -96,8 +96,8 @@ function ResortResults() {
                               <CardComponent
                                    key={resort.id}
                                    props={{
+                                        vendor: false,
                                         id: resort.id,
-                                        resort: true,
                                         img: resort.pics,
                                         name: resort.name,
                                         rating: resort.rating,
@@ -112,14 +112,12 @@ function ResortResults() {
                     </div>
 
                     <div className="pagination">
-                         {/* Previous button, disabled if on the first page */}
                          {currentPage > 1 && (
                               <button onClick={() => setCurrentPage(currentPage - 1)}>
                                    Previous
                               </button>
                          )}
 
-                         {/* Next button, disabled if on the last page */}
                          {currentPage < totalPages && (
                               <button onClick={() => setCurrentPage(currentPage + 1)}>
                                    Next

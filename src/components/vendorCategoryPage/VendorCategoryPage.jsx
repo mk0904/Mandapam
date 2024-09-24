@@ -32,6 +32,7 @@ function VendorCategoryPage() {
     // Memoized filtered and sorted vendors to avoid recalculating on each render
     const filteredVendors = useMemo(() => {
         return vendorData
+            .filter(vendor => vendor.category === category)
             .filter(vendor => city ? vendor.location === city : true)
             .filter(vendor => rating ? vendor.rating >= rating : true)
             .filter(vendor => {

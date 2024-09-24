@@ -5,12 +5,11 @@ import { useNavigate } from 'react-router-dom';
         
 function CardComponent({props}) {
 const navigate = useNavigate();
-    // Function to handle card click
     const handleCardClick = () => {
       if(props.vendors == true){
-      navigate(`/vendors/${props.category}/${props.id}`); // Navigate to the detail page with resort data
+      navigate(`/vendors/${props.category}/${props.id}`,{state: { category: props.category }});
     }else{
-      navigate(`/resorts/${props.id}`); // Navigate to the detail page with resort data
+      navigate(`/resorts/${props.id}`,{state: { category: "resorts" }});
     }}
   
   return (

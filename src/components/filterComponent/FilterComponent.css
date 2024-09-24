@@ -20,7 +20,7 @@
 }
 
 .filterToggleButton {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: fit-content;
   width: fit-content;

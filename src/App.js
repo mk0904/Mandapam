@@ -22,7 +22,7 @@ function App() {
           <Route path="/plan-your-wedding" element={<PlanYourWedding />} />
           <Route path="/vendors/:category" element={<VendorCategoryPage />} />
           <Route path="/vendors/:category/:id" element={<DetailedCard />} />
-          <Route path="/resorts/${props.id" element={<DetailedCard />} />
+          <Route path="/resorts/:id" element={<DetailedCard />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -55,8 +55,11 @@
 
 @media screen and (max-width: 900px) and (min-width: 620px) {
   .mainDiv {
-    padding-top: 10px;
+    padding-top: 70px;
   } 
+  .filterPart{
+    padding-top: 70px;
+  }
 }
 
 @media screen and (max-width: 620px) {
