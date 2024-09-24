@@ -29,15 +29,18 @@ const DetailedCard = () => {
     const responsiveOptions = [
         {
             breakpoint: '991px',
-            numVisible: 4
+            numVisible: 4,
+            numScroll: 1
         },
         {
             breakpoint: '767px',
-            numVisible: 3
+            numVisible: 3,
+            numScroll: 1
         },
         {
             breakpoint: '575px',
-            numVisible: 1
+            numVisible: 1,
+            numScroll: 1
         }
     ];
 
