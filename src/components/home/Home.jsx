@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import HomeImg from '../../images/home1.png';
+import HomeImg from '../../images/home2.png';
 import MobileImg from '../../images/home3.png';
 import resortImg from '../../images/resort1.webp';
 import catererImg from '../../images/catering.webp';

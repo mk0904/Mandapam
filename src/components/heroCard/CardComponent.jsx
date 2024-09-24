@@ -1,13 +1,23 @@
 import React from 'react';
 import './CardComponent.css';
 import { FaMapMarkerAlt, FaStar} from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
         
 function CardComponent({props}) {
-
+const navigate = useNavigate();
+    // Function to handle card click
+    const handleCardClick = () => {
+      if(props.vendors == true){
+      navigate(`/vendors/${props.category}/${props.id}`); // Navigate to the detail page with resort data
+    }else{
+      navigate(`/resorts/${props.id}`); // Navigate to the detail page with resort data
+    }}
+  
   return (
-    <div className='ComponentCard'>
+    
+    <div className='ComponentCard' onClick={handleCardClick}>
       <div className='ComponentCardImage'>
-        <img src={props.img} alt="Vendor" />
+        <img src={props.img[0]} alt="Vendor" />
       </div>
       <div className='ComponentCardInfo'>
         <div className='ComponentCardHeader'>

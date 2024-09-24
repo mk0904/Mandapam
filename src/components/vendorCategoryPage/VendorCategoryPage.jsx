@@ -81,7 +81,11 @@ function VendorCategoryPage() {
                         <CardComponent
                             key={index}
                             props={{
-                                img: vendor.pics[0],
+                                vendors: true,
+                                category: category,
+                                id: vendor.id,
+                                category: category,
+                                img: vendor.pics,
                                 name: vendor.name,
                                 rating: vendor.rating,
                                 location: vendor.location,

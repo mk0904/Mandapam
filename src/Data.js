@@ -90,7 +90,7 @@ const resortsData = [
     desc: 'Capturing the best moments of your life, making your wedding smile forever',
     contact: '9876543210',
     price: [800, 1200],
-    pics: [`${photographersImgCard}`, `${photographersImgCard}`, `${photographersImgCard}`],
+    pics: [`${mehendiartists}`, `${mehendiartists}`, `${mehendiartists}`,],
     datesoccupied: ['2024-10-01', '2024-12-10', '2025-01-05'],
     rating: 4.5,
     location: 'Goa',
@@ -745,7 +745,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876543210',
             price: [75000, 150000],
-            pics: [`${photographersImgCard}`, `https://image.wedmegood.com/resized/800X/uploads/member/73280/1631021841_293A4026_Recovered.jpg`, `${photographersImgCard}`],
+            pics: [`${photographersImgCard}`, `https://image.wedmegood.com/resized/800X/uploads/member/73280/1631021841_293A4026_Recovered.jpg`, `${photographersImgCard}`, `${photographersImgCard}`, `https://image.wedmegood.com/resized/800X/uploads/member/73280/1631021841_293A4026_Recovered.jpg`, `${photographersImgCard}`],
             datesoccupied: ['2024-10-01', '2024-12-10', '2025-01-05'],
             rating: 4.5,
             location: 'Goa'

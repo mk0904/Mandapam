@@ -7,6 +7,7 @@ import VendorsPage from "./components/vendorsPage/VendorsPage";
 import VendorCategoryPage from "./components/vendorCategoryPage/VendorCategoryPage";
 import Home from "./components/home/Home";
 import ResortResults from "./components/resortResults/resortResults";
+import DetailedCard from "./components/detailedCard/DetailedCard";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/vendors" element={<VendorsPage />} />
           <Route path="/plan-your-wedding" element={<PlanYourWedding />} />
           <Route path="/vendors/:category" element={<VendorCategoryPage />} />
+          <Route path="/vendors/:category/:id" element={<DetailedCard />} />
+          <Route path="/resorts/${props.id" element={<DetailedCard />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,250 @@
+:root{
+    font-family: 'SUSE', sans-serif;
+}
+/* General Card Container */
+.cardDetailedContainer {
+     display: flex;
+     flex-direction: row;
+     margin-top: 80px;
+     padding-top: 20px;
+     overflow: hidden;
+     justify-content: center;
+ }
+ 
+ .imageSlider {
+    width: auto;
+     padding-left: 20px;
+     padding-right: 20px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+ 
+ .p-galleria-item-wrapper img {
+     border-radius: 10px;
+ }
+ 
+ .p-galleria-thumbnail-item img {
+     border-radius: 10px;
+     height: 60px;
+     object-fit: cover;
+ }
+ 
+ /* Details Container */
+ .detailsContainer {
+    padding: 20px;
+    border-radius: 10px;
+     width: 35%;
+     background-color: #f9f9f9;
+     text-align: start;
+ }
+
+ .detailsContainer1 {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+     width: auto;
+     background-color: #c791911e;
+     text-align: start;
+ }
+ 
+ /* Resort Name */
+ .detailsContainer h2 {
+    text-align: start;
+     font-size: 2rem;
+     color: hsl(0, 87%, 25%);
+     margin-bottom: 10px;
+ }
+ 
+ /* Resort Description and Other Info */
+ .detailsContainer p {
+     font-size: 1rem;
+     margin: 5px 0;
+     color: #555;
+ }
+ 
+ /* Section Headers */
+ h3 {
+     color: hsl(0, 87%, 25%);
+     font-size: 1.5rem;
+     margin-top: 20px;
+     border-bottom: 1px solid #ddd;
+     padding-bottom: 5px;
+ }
+ 
+ /* Buttons */
+ .viewContact{
+        background-color: #6a4e4c;
+        padding: 10px 20px;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        margin: 20px 0px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+ }
+.p-galleria-item-next, .p-galleria-item-prev {
+     background-color: #64140f6e;
+     color: #fff;
+     padding: 10px 10px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     font-size: 1rem;
+ }
+ .viewContact:hover, .p-galleria-item-next:hover, .p-galleria-item-prev:hover {
+     background-color: #6c1c1c;
+ }
+ 
+ /* .cardForm */
+ .card.cardForm {
+     display: flex;
+     flex-direction: column;
+     margin-top: 20px;
+     padding: 30px;
+     flex-wrap: wrap;
+ }
+ 
+ /* Input and Select Elements */
+ .cardForm input, .cardForm select {
+     margin: 10px;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-size: 1rem;
+     width: 40%;
+ }
+ 
+ .cardForm input[type="date"] {
+     cursor: pointer;
+ }
+
+ .cardForm select{
+    width: 93%;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-size: 1rem;
+ }
+ 
+ .cardForm button {
+     background-color: #6a4e4c;
+     width: 100%;
+     padding: 10px 20px;
+     color: white;
+     font-size: 1rem;
+     border: none;
+     border-radius: 5px;
+     margin-top: 20px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+ 
+ .cardForm button:hover {
+     background-color: #9f7a7a;
+ }
+ 
+ /* Galleria Thumbnail Container */
+ .p-galleria-thumbnail-container {
+     background: whitesmoke;
+     padding: 10px;
+     border-radius: 10px;
+ }
+
+ .p-galleria-item img{
+    max-height: 300px;
+    object-fit: cover;
+ }
+
+img{
+    border-radius: 0px;
+}
+
+ @media screen and (max-width: 1200px) {
+    h3{
+           font-size: 1.3rem;
+    }
+   .detailsContainer {
+       width: 40%;
+       margin-right: 20px;
+   }
+   .p-galleria-thumbnail-container {
+       display: none;
+   }
+   .cardForm input {
+       width: 80%;
+   }
+   .cardForm select {
+       width: 90%;
+   }
+}
+ 
+ /* Responsive Styles */
+ @media (max-width: 1024px) {
+     .cardDetails{
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .cardForm input, .cardForm select {
+         width: 80%;
+     }
+ 
+     .p-galleria-thumbnail-item img {
+         height: 50px; 
+         border-radius: 0px;
+     }
+ }
+ 
+ @media (max-width: 600px) {
+     .detailsContainer h2 {
+         font-size: 1.5rem;
+     }
+
+     .detailsContainer {
+        padding: 20px;
+    }
+ 
+     .detailsContainer p, h3 {
+         font-size: 1rem;
+     }
+ 
+     button, .cardForm button {
+         font-size: 0.9rem;
+     }
+ 
+     .cardForm input, .cardForm select {
+        width: 80%;
+    }
+ }
+ 
+
+ @media screen and (max-width: 768px) {
+    .cardDetailedContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    .imageSlider {
+        max-width: 400px;
+        padding-top: 0px;
+    }
+    .imageSlider img{
+        max-height: 250px;
+    }
+    .detailsContainer {
+        min-width: 360px;
+        margin-right: 0px;
+    }
+    .p-galleria-thumbnail-container {
+        display: none;
+    }
+    
+ }
+
+ 

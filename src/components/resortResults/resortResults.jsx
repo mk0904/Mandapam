@@ -96,8 +96,9 @@ function ResortResults() {
                               <CardComponent
                                    key={resort.id}
                                    props={{
+                                        id: resort.id,
                                         resort: true,
-                                        img: resort.pics[0],
+                                        img: resort.pics,
                                         name: resort.name,
                                         rating: resort.rating,
                                         location: resort.location,
