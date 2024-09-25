@@ -1,0 +1,93 @@
+:root{
+     font-family: 'SUSE', sans-serif;
+}
+.rivaaya{
+     position: relative;
+     width: 100%;
+     height: 100vh; /* Full viewport height */
+     overflow: hidden; /* Prevents overflow from the video */
+   }
+   
+   .background-video {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -1; /* Places video behind other content */
+     transform: translate(-50%, -50%); /* Center the video */
+   }
+   
+   .overlay {
+     position: relative;
+     z-index: 1; /* Keeps overlay on top of video */
+     color: white;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100%; /* Full height */
+     padding: 20px;
+     background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+   }
+   
+   .rivaaya h1 {
+     font-size: 5rem;
+     margin-bottom: 10px;
+     animation: fadeIn 2s;
+     font-weight: 400;
+   }
+   
+   .rivaaya h3 {
+     font-size: 3rem;
+     margin-bottom: 20px;
+     animation: fadeIn 2.5s;
+     color: #f9f4ed;
+     font-weight: 400;
+   }
+   
+   .flip-clock {
+     margin-bottom: 20px; /* Space between countdown and button */
+   }
+   
+   .rivaayaNotifyButton {
+     background-color: #f9f4ed79;
+     color: white;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     font-size: 1.5rem;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     font-family: 'SUSE', sans-serif;
+   }
+   
+   .rivaayaNotifyButton:hover {
+     background-color: #99968fb9;
+     font-family: 'SUSE', sans-serif;
+   }
+   
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+     to {
+       opacity: 1;
+     }
+   }
+   
+   .fcc ._qWTcH ._1tbqx .flip-clock{
+     margin-bottom: 20px;
+   }
+
+   .fcc__unit_time{
+     font-size: 1.5rem;
+   }
+
+   ._SKh-V, ._2v-d4, ._106d2 {
+     background: #f9f4ed;
+     color: hsl(0, 87%, 25%);
+   }

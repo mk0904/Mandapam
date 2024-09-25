@@ -10,6 +10,7 @@ import VendorCategoryPage from "./components/vendorCategoryPage/VendorCategoryPa
 import Home from "./components/home/Home";
 import ResortResults from "./components/resortResults/resortResults";
 import DetailedCard from "./components/detailedCard/DetailedCard";
+import Rivaaya from "./components/rivaaya/Rivaaya";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/vendors/:category" element={<VendorCategoryPage />} />
           <Route path="/vendors/:category/:id" element={<DetailedCard />} />
           <Route path="/resorts/:id" element={<DetailedCard />} />
+          <Route path="/rivaaya" element={<Rivaaya />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer 

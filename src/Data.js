@@ -90,7 +90,7 @@ const resortsData = [
     desc: 'Capturing the best moments of your life, making your wedding smile forever',
     contact: '9876543210',
     price: [800, 1200],
-    pics: [`${mehendiartists}`, `${mehendiartists}`, `${mehendiartists}`,],
+    pics: [`${mehendiartists}`, `${bridalGrooming}`, `${mehendiartists}`,],
     datesoccupied: ['2024-10-01', '2024-12-10', '2025-01-05'],
     rating: 4.5,
     location: 'Goa',
