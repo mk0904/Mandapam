@@ -190,10 +190,6 @@
     max-height: 408px;
   }
 
-  .ComponentCardImage img {
-    height: 180px;
-  }
-
   .cardList {
     margin-top: 10px;
     display: flex;
@@ -224,3 +220,39 @@
     flex-direction: column;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slide up from below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ComponentCard {
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 100%;
+  min-height: 428px;
+  max-height: 528px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+  opacity: 0; /* Start hidden for animation */
+  animation: fadeInUp 0.5s ease forwards; /* Apply animation */
+}
+
+.ComponentCard:hover {
+  transform: scale(1.03);
+}
+
+/* Rest of your CSS remains unchanged */

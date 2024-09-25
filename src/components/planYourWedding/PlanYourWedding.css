@@ -125,3 +125,46 @@
       min-height: 450px;
     }
    }
+
+   @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Slide up from below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Slide up from below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .cardContainer h1 {
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .card {
+    opacity: 0;
+    animation: slideIn 0.8s ease forwards;
+  }
+  
+  .cardContainerDiv .card {
+    animation-delay: 0.2s;
+  }
+  
+  .cardContainerDiv .card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .cardContainerDiv .card:nth-child(3) {
+    animation-delay: 0.6s; 
+  }
