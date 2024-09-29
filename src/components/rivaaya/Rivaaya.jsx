@@ -17,7 +17,7 @@ function Rivaaya() {
   return (
     <section className="rivaaya">
       {/* Video background */}
-      <video autoPlay loop muted className="background-video">
+      <video autoPlay loop className="background-video">
         <source src={video} type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>

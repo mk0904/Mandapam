@@ -95,14 +95,15 @@
   text-decoration: none;
 }
 
-a {
+a,li {
   color: hsl(0, 87%, 15%);
   text-decoration: none;
 }
 
-a:hover {
+a:hover, li:hover {
   transition: color 0.3s ease;
   color: hsl(0, 87%, 25%);
+  cursor: pointer;
 }
 
 .main-logo,

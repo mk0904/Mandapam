@@ -1,0 +1,144 @@
+.modal-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+   }
+   
+   .modal-container {
+     background: #fff;
+     width: 80%;
+     max-width: 700px;
+     height: 575px;
+     display: flex;
+     border-radius: 10px;
+     overflow: hidden;
+     position: relative;
+   }
+   
+   /* 2:3 ratio layout using flexbox */
+   .modal-left {
+     flex: 2;
+     background-color: #f0f0f0;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .modal-right {
+     flex: 3;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .auth-form {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     text-align: center;
+   }
+   
+   .auth-button {
+     width: 100%;
+     padding: 10px;
+     margin: 10px 0;
+     background-color: #007bff;
+     color: white;
+     border: none;
+     cursor: pointer;
+   }
+   
+   .auth-button:hover {
+     background-color: #0056b3;
+   }
+   
+   .link {
+     color: #007bff;
+     cursor: pointer;
+   }
+   
+   .link:hover {
+     text-decoration: underline;
+   }
+   
+   .close-button {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     font-size: 20px;
+     background: none;
+     border: none;
+     cursor: pointer;
+   }
+   
+   .auth-input {
+     width: 93%;
+     padding: 10px;
+     margin: 10px 0;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+   }
+   
+   .auth-input:focus {
+     outline: none;
+     border-color: hsl(0, 87%, 25%);
+   }
+   
+   /* Responsive Design */
+   @media (max-width: 768px) {
+     .modal-container {
+       flex-direction: column;
+       height: auto;
+       width: 90%;
+     }
+   
+     .modal-left, .modal-right {
+       flex: unset;
+       padding: 15px;
+     }
+   
+     .modal-left {
+       text-align: center;
+     }
+   
+     .auth-button {
+       font-size: 16px;
+       padding: 8px;
+     }
+
+   
+     .close-button {
+       font-size: 18px;
+     }
+   }
+   
+   @media (max-width: 480px) {
+     .modal-container {
+       width: 95%;
+     }
+   
+     .auth-button {
+       font-size: 14px;
+     }
+   
+     .auth-input {
+       padding: 6px;
+       margin: 8px 0;
+     }
+   
+     .close-button {
+       font-size: 16px;
+     }
+   }
+   

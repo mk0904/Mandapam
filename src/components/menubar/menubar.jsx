@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './menubar.css';
 import { NavLink } from 'react-router-dom';
+import AuthModal from '../authModal/AuthModal';
 
 function Menubar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,11 @@ function Menubar() {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className='br-header'>
@@ -37,7 +43,8 @@ function Menubar() {
         <div className={`navbar-right ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li><NavLink className='mandapamfc' to="/mfc">mandapam <span className='s1'>for <span className='s2'>corporates</span></span></NavLink></li>
-            <li><NavLink onClick={closeMenu} to="/login">Login</NavLink></li>
+            <li onClick={openModal}>Login</li>
+            <AuthModal isOpen={isModalOpen} onClose={closeModal} />
           </ul>
         </div>
       </nav>
