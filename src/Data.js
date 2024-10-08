@@ -865,7 +865,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876544310',
             price: [150000, 300000],
-            pics: ['goa_feast_1.jpg', 'goa_feast_2.jpg', 'goa_feast_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/member/3233206/1689576999_image1014.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4071302/1676893217_WhatsApp_Image_2023_02_20_at_5.06.25_PM__1_.jpeg","https://image.wedmegood.com/resized/800X/uploads/member/4071302/1695130587_21.JPG","https://image.wedmegood.com/resized/800X/uploads/member/4071302/1695130681_25.JPG","https://image.wedmegood.com/resized/800X/uploads/member/4071302/1720698787_image3242.jpg"],
             datesoccupied: ['2024-10-10', '2024-11-20', '2024-12-30'],
             rating: 4.5,
             location: 'Goa'
@@ -877,7 +877,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9988776655',
             price: [200000, 400000],
-            pics: ['jaipur_royal_1.jpg', 'jaipur_royal_2.jpg', 'jaipur_royal_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/member/2631670/1658184033_IMG_20211021_WA0001.jpg","https://image.wedmegood.com/resized/800X/uploads/member/2631670/1639141212_WhatsApp_Image_2021_12_10_at_6.28.48_PM.jpeg","https://image.wedmegood.com/resized/800X/uploads/member/2631670/1680882870_IMG_20220513_WA0002.jpg","https://image.wedmegood.com/resized/800X/uploads/member/2631670/1639482704_IMG_20211213_WA0007.jpg","https://image.wedmegood.com/resized/800X/uploads/member/2631670/1639482948_IMG_20211022_WA0096.jpg"],
             datesoccupied: ['2024-10-05', '2024-12-01', '2024-12-18'],
             rating: 4.7,
             location: 'Jaipur'
@@ -889,7 +889,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9876541234',
             price: [180000, 350000],
-            pics: ['udaipur_food_1.jpg', 'udaipur_food_2.jpg', 'udaipur_food_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/member/1520983/1699070768_WhatsApp_Image_2023_11_04_at_9.35.26_AM.jpeg","https://image.wedmegood.com/resized/800X/uploads/member/1520983/1676090731_IMG_20230210_202405.jpg","https://image.wedmegood.com/resized/800X/uploads/member/1520983/1676090573_IMG_20230210_202516.jpg","https://image.wedmegood.com/resized/800X/uploads/member/1520983/1676090578_IMG_20230210_202346.jpg","https://image.wedmegood.com/resized/800X/uploads/member/1520983/1662795479_Screenshot_2022_09_10_13_07_45_37_6012fa4d4ddec268fc5c7112cbb265e7.jpg"],
             datesoccupied: ['2024-11-02', '2024-12-15', '2024-12-25'],
             rating: 4.6,
             location: 'Udaipur'
@@ -901,7 +901,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9898981234',
             price: [160000, 320000],
-            pics: ['pune_flavor_1.jpg', 'pune_flavor_2.jpg', 'pune_flavor_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/member/1046776/1654158207_IMG_20220528_WA0010.jpg","https://image.wedmegood.com/resized/800X/uploads/member/1046776/1654158208_IMG_20220528_WA0012.jpg","https://image.wedmegood.com/resized/800X/uploads/member/1046776/1654158209_IMG_20220528_WA0016.jpg","https://image.wedmegood.com/resized/800X/uploads/member/1046776/1583224469_IMG_20200302_WA0024.jpg","https://image.wedmegood.com/resized/800X/uploads/vendor_cover_pic/101931/2932a24d-21e8-4098-8ef2-e3ed8b4ce25b.jpg"],
             datesoccupied: ['2024-09-12', '2024-11-25', '2024-12-20'],
             rating: 4.4,
             location: 'Pune'
@@ -913,7 +913,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9998887777',
             price: [250000, 500000],
-            pics: ['delhi_grand_1.jpg', 'delhi_grand_2.jpg', 'delhi_grand_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/project/216072/1663840855_IMG_20201129_WA0059.jpg","https://image.wedmegood.com/resized/800X/uploads/project/216072/1663840857_IMG_20200914_WA0095.jpg","https://image.wedmegood.com/resized/800X/uploads/project/216072/1663840860_IMG_20201109_WA0118.jpg","https://image.wedmegood.com/resized/800X/uploads/project/216072/1663840844_IMG_20201213_WA0083.jpg","https://image.wedmegood.com/resized/800X/uploads/project/216072/1663840851_IMG_20210106_WA0088.jpg"],
             datesoccupied: ['2024-10-15', '2024-11-22', '2024-12-30'],
             rating: 4.8,
             location: 'Delhi'
@@ -925,7 +925,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9123456789',
             price: [230000, 450000],
-            pics: ['hyderabad_nawabi_1.jpg', 'hyderabad_nawabi_2.jpg', 'hyderabad_nawabi_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/member/4105632/1677752334_1.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4105632/1677752335_11.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4105632/1677752334_2.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4105632/1677752334_07.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4105632/1677752334_05.jpg"],
             datesoccupied: ['2024-10-25', '2024-11-10', '2024-12-18'],
             rating: 4.9,
             location: 'Hyderabad'
@@ -937,7 +937,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9101112131',
             price: [190000, 380000],
-            pics: ['bangalore_caterers_1.jpg', 'bangalore_caterers_2.jpg', 'bangalore_caterers_3.jpg'],
+            pics: ["https://image.wedmegood.com/resized/800X/uploads/member/4637718/1705322355_20231226_182456.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4637718/1704806788_20230121_170648.jpg","https://image.wedmegood.com/resized/800X/uploads/project/278735/1707456399_20240205_132944.jpg","https://image.wedmegood.com/resized/800X/uploads/project/276292/1705716778_IMG20230810125935.jpg","https://image.wedmegood.com/resized/800X/uploads/member/4637718/1705720131_IMG20230126194132.jpg"],
             datesoccupied: ['2024-10-08', '2024-11-17', '2024-12-29'],
             rating: 4.7,
             location: 'Bangalore'
@@ -949,7 +949,7 @@ const vendorData = [{
             desc: 'Capturing the best moments of your life, making your wedding smile forever',
             contact: '9234567890',
             price: [170000, 340000],
-            pics: ['lucknow_shahi_1.jpg', 'lucknow_shahi_2.jpg', 'lucknow_shahi_3.jpg'],
+            pics: ['https://image.wedmegood.com/resized/800X/uploads/member/822111/1690287710_FB_IMG_1689997123527.jpg', 'https://image.wedmegood.com/resized/800X/uploads/project/276553/1706005233_FB_IMG_1662433844367.jpg', 'https://image.wedmegood.com/resized/800X/uploads/project/276553/1706005230_FB_IMG_1647866981831.jpg', "https://image.wedmegood.com/resized/800X/uploads/project/276553/1706004607_1701429306589.jpg","https://image.wedmegood.com/resized/800X/uploads/member/822111/1690287253_FB_IMG_1682175643444.jpg"],
             datesoccupied: ['2024-09-30', '2024-10-20', '2024-12-05'],
             rating: 4.6,
             location: 'Lucknow'
